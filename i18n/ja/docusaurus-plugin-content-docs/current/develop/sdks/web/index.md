@@ -11,11 +11,9 @@ import { SdkExampleCodeBlock } from "@site/src/components/SdkExampleCodeBlock";
 
 # Momento web SDK for JavaScript をブラウザ上で
 
-Momento は 2つの JavaScript SDK を提供しています。 [1つは Node.js 用](/develop/sdks/nodejs)で、もう一つがウェブアプリケーション用です。 2つの SDK は同一の API を持っているので、`import` ステートメントを除けばコードは同じに見えると思いますが、裏側では異なる JavaScript 実行環境に対してパフォーマンス最適化や互換性を求めて構築されています。
+Momento は 2つの JavaScript SDK を提供しています。[1つは Node.js 用](/develop/sdks/nodejs)で、もう一つがウェブアプリケーション用です。2つの SDK は同一の API を持っているので、`import` ステートメントを除けばコードは同じに見えると思いますが、裏側では異なる JavaScript 実行環境に対してパフォーマンス最適化や互換性を求めて構築されています。
 
-<img src="/img/web.jpg" width="90%" alt="a picture of abstract web strung between node.js nodes." />
-
-Node.js SDK はサーバーサイドのユースケースに最適です。 一方、Momento web SDK はブラウザ上で実行され Momento のサービスと直接通信する JavaScript コードを書くことを可能にしてくれます。 これによってブラウザと Momento の間でキャッシュやパブ/サブの呼出しを仲介するウェブサービスを自身で構築したり運用する典型的なオーバーヘッドを回避することができます。 これはまた、ウェブトラフィックにおいて1ホップ減らせることを意味するので、ブラウザアプリケーションはより良いパフォーマンスさえも得られます。 両方の意味でお得です！
+Node.js SDK はサーバーサイドのユースケースに最適です。一方、Momento web SDK はブラウザ上で実行され Momento のサービスと直接通信する JavaScript コードを書くことを可能にしてくれます。これによってブラウザと Momento の間でキャッシュやパブ/サブの呼出しを仲介するウェブサービスを自身で構築したり運用する典型的なオーバーヘッドを回避することができます。これはまた、ウェブトラフィックにおいて1ホップ減らせることを意味するので、ブラウザアプリケーションはより良いパフォーマンスさえも得られます。両方の意味でお得です！
 
 また、web SDK は Node.js 以外の JavaScript 環境でも利用可能です。
 
@@ -25,7 +23,7 @@ Momento web SDK は [`@gomomento/sdk-web`](https://www.npmjs.com/package/@gomome
 
 ## 必要条件
 
-- Momento 認証トークンは必要です。 [Momento Web コンソール](https://console.gomomento.com/)で取得可能です。
+- Momento 認証トークンは必要です。[Momento Web コンソール](https://console.gomomento.com/)で取得可能です。
 
 ## リソース
 
@@ -36,9 +34,9 @@ Momento web SDK は [`@gomomento/sdk-web`](https://www.npmjs.com/package/@gomome
 
 ## Momento web SDK と Momento Topics
 
-Momento Topics を使えばブラウザ内でのパブリッシャーとサブスクライバーの通信をとても簡素化してくれます。 伝統的には、ウェブサイトに埋め込まれたチャットアプリケーションの開発者を例とすると、ブラウザのためのクライアントコードだけでなく、全ての通信をルーティングするためのサーバーサイドのコードも開発する必要があります。
+Momento Topics を使えばブラウザ内でのパブリッシャーとサブスクライバーの通信をとても簡素化してくれます。伝統的には、ウェブサイトに埋め込まれたチャットアプリケーションの開発者を例とすると、ブラウザのためのクライアントコードだけでなく、全ての通信をルーティングするためのサーバーサイドのコードも開発する必要があります。
 
-Momento Topics を Momento web SDK 使って組み込むことでサーバーサイドの複雑さを取り除くことができます。 開発者はブラウザから直接 Momento Topics をサブスクライブすることができます。 トピックにメッセージがパブリッシュされれば、Momento が全ての通信の面倒をみてくれて、WebSocket のためのサーバーサイドのインフラを作る必要性をなくしてくれます。
+Momento Topics を Momento web SDK 使って組み込むことでサーバーサイドの複雑さを取り除くことができます。開発者はブラウザから直接 Momento Topics をサブスクライブすることができます。トピックにメッセージがパブリッシュされれば、Momento が全ての通信の面倒をみてくれて、WebSocket のためのサーバーサイドのインフラを作る必要性をなくしてくれます。
 
 ## ブラウザで web SDK を使う
 
@@ -50,9 +48,9 @@ API 呼出しは [Momento Node.js SDK と同一](/develop/sdks/nodejs/cheat-shee
 
 ## ブラウザのための認証情報
 
-ブラウザアプリケーションが Momento サービスと通信するために、Momento 認証トークンをブラウザに渡す必要があります。 推奨としては、Momento 認証トークンをブラウザセッション毎に期限切れになるようにすると良いです。 こうすることで、データが危険に晒されることを心配せずに、アプリケーションでトークンを配布可能にします。
+ブラウザアプリケーションが Momento サービスと通信するために、Momento 認証トークンをブラウザに渡す必要があります。推奨としては、Momento 認証トークンをブラウザセッション毎に期限切れになるようにすると良いです。こうすることで、データが危険に晒されることを心配せずに、アプリケーションでトークンを配布可能にします。
 
-ブラウザで利用するための Momento 認証トークンを作成するためには、一般的には Node.js SDK の様な他の Momento SDK を使ったウェブアプリケーションを立てることになります。 まず、Momento `AuthClient` を生成する必要があります:
+ブラウザで利用するための Momento 認証トークンを作成するためには、一般的には Node.js SDK の様な他の Momento SDK を使ったウェブアプリケーションを立てることになります。まず、Momento `AuthClient` を生成する必要があります:
 
 <SdkExampleCodeBlock language={'javascript'} snippetId={'API_InstantiateAuthClient'} />
 
@@ -65,5 +63,5 @@ API 呼出しは [Momento Node.js SDK と同一](/develop/sdks/nodejs/cheat-shee
 ## よくある質問
 
 <details>
-  <summary>ブラウザからのトラフィックは暗号化されていますか？ </summary>
-Momento サービスの全てのトラフィックと同様に、web SDK は経路上は全て暗号化されています。 加えると、SDK は TLS 1.2+ 暗号化を利用しています。 </details>
+  <summary>ブラウザからのトラフィックは暗号化されていますか？</summary>
+Momento サービスの全てのトラフィックと同様に、web SDK は経路上は全て暗号化されています。加えると、SDK は TLS 1.2+ 暗号化を利用しています。 </details>
