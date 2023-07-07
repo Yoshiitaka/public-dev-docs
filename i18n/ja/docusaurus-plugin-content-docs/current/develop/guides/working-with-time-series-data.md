@@ -3,7 +3,7 @@ sidebar_position: 5
 sidebar_label: Working with Time Series Data
 title: Working with Time Series Data
 description: Learn how to store time series data in Momento Cache
-pagination_next: null
+pagination_next:
 ---
 
 # Storing time series data
@@ -23,11 +23,9 @@ Use the Momento SDK's [SortedSetPutElement](/develop/api-reference/collections/s
 Let's consider a workload for storing IoT sensor data in a Momento Cache.
 
 - Each sensor has its own SortedSet.
-- Each sensor_value within sensor's SortedSet is a JSON string containing the value and timestamp
-i.e. `JSON.stringify("value":1, "timestamp": 1686583076)`
+- Each sensor_value within sensor's SortedSet is a JSON string containing the value and timestamp i.e. `JSON.stringify("value":1, "timestamp": 1686583076)`
 - Each score for the item in the SortedSet is the timestamp of the datapoint. SortedSets use scores to sort the data within the set.
-
->Code snippet for writing SortedSet into the Cache
+> Code snippet for writing SortedSet into the Cache
 
 ```javascript
 const item_value = JSON.stringify({"sensor_value": sensor_value, "timestamp": timestamp})
@@ -38,24 +36,21 @@ const response = await cacheClient.sortedSetPutElement("sensor_data", `${sensor_
 Retrieving time series data from the sorted set:
 
 Use SortedSetFetchByRank to retrieve data from the cache. If you want to retrieve the entire SortedSet, don't pass in any startRank and endRank parameter values.
-
->Code snippet for SortedSetFetchByRank to retrieve the entire SortedSet
+> Code snippet for SortedSetFetchByRank to retrieve the entire SortedSet
 
 ```javascript
 const sensor_data = await cacheClient.sortedSetFetchByRank("sensor_data", `${sensor_id}-sensor-data`)
 ```
 
 If you only want to retrieve a subset of the SortedSet, you could set the startRank and endRank parameter values as follows:
-
->Code snippet for SortedSetFetchByRank to retrieve a subset of the SortedSet
+> Code snippet for SortedSetFetchByRank to retrieve a subset of the SortedSet
 
 ```javascript
 const sensor_data = await cacheClient.sortedSetFetchByRank("sensor_data", `${sensor_id}-sensor-data`, 0, 10)
 ```
 
-If you only want to retrieve data from a specified time period instead of a specific number of values, you can use [SortedSetFetchByScore](/develop/api-reference/collections/sortedsets#sortedsetfetchbyscore). 
-
->Code snippet for SortedSetFetchByScore to retrieve a subset of the SortedSet
+If you only want to retrieve data from a specified time period instead of a specific number of values, you can use [SortedSetFetchByScore](/develop/api-reference/collections/sortedsets#sortedsetfetchbyscore).
+> Code snippet for SortedSetFetchByScore to retrieve a subset of the SortedSet
 
 ```javascript
 const sensor_data = await cacheClient.sortedSetFetchByScore("sensor_data", `${sensor_id}-sensor-data`, 1686511076, 1686597476)
