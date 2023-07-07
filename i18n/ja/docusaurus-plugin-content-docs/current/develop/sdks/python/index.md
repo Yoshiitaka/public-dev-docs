@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
 title: Momento Python SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Python
 description: Momento Python SDK に関する情報です。
 ---
