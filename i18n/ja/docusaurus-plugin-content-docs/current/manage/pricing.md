@@ -20,18 +20,17 @@ Momento キャッシュには隠れた料金はありません。ストレージ
 <details open>
   <summary>Momento は本当に$.50/GB のデータ転送の出入りだけなのですか？それ以外にお金がかかるものはありますか？</summary>
 
-| 対象                                   | Momento 料金 |
-| -------------------------------------- | ------------ |
-| メモリ / ストレージ                    | $0/GB        |
-| 複数 AZ レプリケーション料金           | $0/GB        |
-| シングルサインオン & チーム (まもなく) | $0/ユーザー  |
+| 対象                     | Momento 料金 |
+| ---------------------- | ---------- |
+| メモリ / ストレージ            | $0/GB      |
+| 複数 AZ レプリケーション料金       | $0/GB      |
+| シングルサインオン & チーム (まもなく) | $0/ユーザー    |
 
  </details>
 
  <details>
 <summary>Momento CacheやMomento Topicsの費用の予測をするためにいくつかの価格例を確認できますか？</summary>
-はい、<a href="https://www.gomomento.com/blog/complicated-pricing-is-not-serverless">こちらのMomentoブログ</a>から確認していただけます。
-</details>
+はい、<a href="https://www.gomomento.com/blog/complicated-pricing-is-not-serverless">こちらのMomentoブログ</a>から確認していただけます。 </details>
 
 <details>
 <summary>Momento を無料で本番環境のアプリケーションに使うことはできますか？</summary>
@@ -51,7 +50,6 @@ Momento キャッシュには隠れた料金はありません。ストレージ
 
 <details>
   <summary>スケールするのですか？</summary>
-はい、もちろんです！Momento は将来も使い続けられるキャッシュとして最高の選択肢です。Momento を追加するのは *ものすごく* 素早くできて、そのあとは1RPS だろうが100万RPS だろうが、あとのことは全てバックグラウンドに行われるので皆さんが考える必要がありません。使った分だけ料金を払うだけでよいので、スケール可能なキャッシュを高額な料金を支払うことなく得られます。
-</details>
+はい、もちろんです！Momento は将来も使い続けられるキャッシュとして最高の選択肢です。Momento を追加するのは *ものすごく* 素早くできて、そのあとは1RPS だろうが100万RPS だろうが、あとのことは全てバックグラウンドに行われるので皆さんが考える必要がありません。使った分だけ料金を払うだけでよいので、スケール可能なキャッシュを高額な料金を支払うことなく得られます。 </details>
 
 [Momento をはじめてみましょう！](./../getting-started)
