@@ -8,6 +8,8 @@ description: Momento Rust SDK に関する情報です。
 
 # Momento Rust SDK
 
+<img src="/img/rust.png" width="90%" alt="a picture of abstract shapes as building and nodes of data connecting them at high speed" />
+
 ようこそ、Momento Rust SDK のドキュメントへ！
 
 Momento Rust SDK は [`momento`](https://crates.io/crates/momento) の crates.io パッケージとして利用可能です。
@@ -16,7 +18,7 @@ Momento Rust SDK は [`momento`](https://crates.io/crates/momento) の crates.io
 
 ## 必要条件
 
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 
 ## リソース
 
@@ -25,6 +27,6 @@ Momento Rust SDK は [`momento`](https://crates.io/crates/momento) の crates.io
 - まもなく: オブザーバビリティ: Rust SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Rust SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-まもなく！
+COMING SOON
