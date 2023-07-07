@@ -8,16 +8,18 @@ description: Momento Python SDK に関する情報です。
 
 # Momento Python SDK
 
+<img src="/img/snake.png" width="90%" alt="a picture of abstract shapes as building and nodes of data connecting them at high speed" />
+
 ようこし、Python SDK のドキュメントへ！
 
-The Momento Python SDK は [`momento`](https://pypi.org/project/momento/) の pypi パッケージとして利用可能です。
-
 ソースコードは GitHub にあります: [momentohq/client-sdk-python](https://github.com/momentohq/client-sdk-python)
+
+The Momento Python SDK は [`momento`](https://pypi.org/project/momento/) の pypi パッケージとして利用可能です。
 
 ## 必要条件
 
 - [Python 3.7](https://www.python.org/downloads/) 以上が必要です。
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 
 ## リソース
 
@@ -26,6 +28,6 @@ The Momento Python SDK は [`momento`](https://pypi.org/project/momento/) の py
 - まもなく: オブザーバビリティ: Python SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Python SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-まもなく！
+COMING SOON
