@@ -29,26 +29,31 @@ export MOMENTO_AUTH_TOKEN=<your Momento token here>
 ```
 
 ## CacheClient を設定
+
 このコードで、それぞれの他の関数が呼び出す必要のある CacheClient struct を生成します。
 
 <SdkExampleCodeBlock language={'elixir'} file={'cheat_sheet.exs'} />
 
 ## Momento Cache に新しいキャッシュを作成する
+
 この関数を使ってアカウント内に新しいキャッシュを作成します。
 
 <SdkExampleCodeBlock language={'elixir'} snippetId={'API_CreateCache'} />
 
 ## アカウント内の既存のキャッシュをリストする
+
 アカウント内のキャッシュの名前をシンプルにリストします。
 
 <SdkExampleCodeBlock language={'elixir'} snippetId={'API_ListCaches'} />
 
 ## 項目をキャッシュに書き込む
+
 書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
 
 <SdkExampleCodeBlock language={'elixir'} snippetId={'API_Set'} />
 
 ## キャッシュから項目を読み出す
+
 これは、キャッシュから項目を取得するためのシンプルな読み出し操作です。
 
 <SdkExampleCodeBlock language={'elixir'} snippetId={'API_Get'} />
@@ -58,6 +63,6 @@ export MOMENTO_AUTH_TOKEN=<your Momento token here>
 You can find complete, working examples in the [Elixir SDK GitHub repo examples directory](https://github.com/momentohq/client-sdk-elixir/tree/main/examples).
 実行可能な完成された例は [Elixir SDK GitHub レポジトリの examples ディレクトリ](https://github.com/momentohq/client-sdk-elixir/tree/main/examples)をご覧下さい。
 
-:::info
+:::info null
 これらの API 呼出し以上のものは、[API リファレンスページ](/develop/api-reference/index.mdx)で Momento API 呼出しの全種類の詳しい情報をご確認下さい。
 :::
