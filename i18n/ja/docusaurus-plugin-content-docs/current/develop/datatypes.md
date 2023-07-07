@@ -3,8 +3,8 @@ sidebar_position: 2
 sidebar_label: データ型
 sidebar_class_name: sidebar-item-data-types
 title: サポートしているデータ型
-pagination_prev: null
-pagination_next: null
+pagination_prev:
+pagination_next:
 description: Momento Cache のコアとなるデータ型を学び、現代的なプログラミング言語のに共通する型との対応をみてみましょう。
 ---
 
@@ -105,20 +105,16 @@ API メソッドは [ソート済セットコレクションデータ型の API 
 ## FAQs
 <details>
   <summary>辞書型の項目からデータの部分集合を取り出す API 呼出しをした場合、項目全体のサイズが GB 毎の転送コストに計上されますか？</summary>
-いいえ、されません。例えば、もし全体で 50 KB ある辞書型の項目から、DictionaryGetField API 呼出しで 5 KB の field:value 組のデータを1つ取り出した場合、5 KB だけが GB 毎の転送コストに計上されます。
-</details>
+いいえ、されません。例えば、もし全体で 50 KB ある辞書型の項目から、DictionaryGetField API 呼出しで 5 KB の field:value 組のデータを1つ取り出した場合、5 KB だけが GB 毎の転送コストに計上されます。 </details>
 
 <details>
   <summary>どうやれば Momento Cache に JSON ドキュメントを保存できますか？</summary>
-お好みの JSON ライブラリを使って、その JSON ドキュメントをバイト配列にシリアライズし、そのバイト配列を Momento Cache に挿入してください。または、JSON ドキュメントの各フィールドの値を辞書型に保存することもできます。
-</details>
+お好みの JSON ライブラリを使って、その JSON ドキュメントをバイト配列にシリアライズし、そのバイト配列を Momento Cache に挿入してください。または、JSON ドキュメントの各フィールドの値を辞書型に保存することもできます。 </details>
 
 <details>
   <summary>Momento Cache はコレクションデータ型でネストされたデータを保存できますか？</summary>
-直接的にはできません。ベストな選択肢としては、そのデータを JSON オブジェクトとして保存することで、お好みの JSON ライブラリを使って JSON ドキュメントをバイト配列にシリアライズしてからそのバイト配列を Momento Cache に挿入できます。
-</details>
+直接的にはできません。ベストな選択肢としては、そのデータを JSON オブジェクトとして保存することで、お好みの JSON ライブラリを使って JSON ドキュメントをバイト配列にシリアライズしてからそのバイト配列を Momento Cache に挿入できます。 </details>
 
 <details>
   <summary>インクリメント API を使う場合、要素はどのような形式にすればよいですか？</summary>
-インクリメント API で使う要素は、基数 10 の整数を表現する UTF-8 の文字列で保存されている必要があります。もし要素がこの形式になっていない場合、API 呼出しは形式エラーを投げます。
-</details>
+インクリメント API で使う要素は、基数 10 の整数を表現する UTF-8 の文字列で保存されている必要があります。もし要素がこの形式になっていない場合、API 呼出しは形式エラーを投げます。 </details>
