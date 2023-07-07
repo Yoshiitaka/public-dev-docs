@@ -4,7 +4,7 @@ sidebar_class_name: sidebar-item-redis
 sidebar_label: Redis互換クライアント
 pagination_prev:
 title: Redis互換クライアント
-description: With these drop-in replacement client libraries, quickly upgrade from Redis to Momento Cache.
+description: Redis互換クライアントを使用してMomento Cache、Momento Topicsに切り替える方法
 ---
 
 import Tabs from '@theme/Tabs';
@@ -12,7 +12,7 @@ import TabItem from '@theme/TabItem';
 
 # Redis互換クライアントを使用してMomento Cache、Momento Topicsに切り替える方法
 
-Redisキャッシュが使われている既存のアプリを、Momentoのサービスによるものに切り替えることを検討されていますか？ Redis互換クライアントを使用すれば、コードのリファクタリングは必要ありません。 既存のRedisクライアントは、ドロップインによって互換性のあるクライアントに置き換えることができます。 コードの中核部分を変える必要はなく、クライアントライブラリを互換クライアントに変更し、接続情報を変更するだけでできます。
+Redisキャッシュが使われている既存のアプリを、Momentoのサービスによるものに切り替えることを検討されていますか？Redis互換クライアントを使用すれば、コードのリファクタリングは必要ありません。既存のRedisクライアントは、ドロップインによって互換性のあるクライアントに置き換えることができます。コードの中核部分を変える必要はなく、クライアントライブラリを互換クライアントに変更し、接続情報を変更するだけでできます。
 
 ## 始めよう
 
