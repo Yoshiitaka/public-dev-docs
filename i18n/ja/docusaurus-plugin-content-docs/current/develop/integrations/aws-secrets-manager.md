@@ -179,5 +179,4 @@ export default async function CreateCacheClient(
 
 <details>
   <summary>Momento認証トークンをAWS Secrets Managerに保存する必要がありますか？</summary>
-いいえ、必要ありません。Momento認証トークンを環境変数またはファイルに保存できますが、AWS Secrets Manager等に保存するよりも安全性が低いため、ベストプラクティスではありません。
-</details>
+いいえ、必要ありません。Momento認証トークンを環境変数またはファイルに保存できますが、AWS Secrets Manager等に保存するよりも安全性が低いため、ベストプラクティスではありません。 </details>
