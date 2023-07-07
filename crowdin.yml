@@ -1,0 +1,24 @@
+#
+# Your Crowdin credentials
+#
+"project_id": "599759"
+"api_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ3UUVxdmhVM3ZMT2EyWGljbVV5VCIsImp0aSI6ImVkMTVlMzgyMzk2NGFkODgxMDc3YmFmNmE3MWI4MzYzMzc4ODVmYTQwMzI0N2UzYTdlZmNmOTI0MjZiZjQxMDkyMTRkNzgwYzhlZjJiNjI0IiwiaWF0IjoxNjg4NjkzNDQ0LjYzMDMyNCwibmJmIjoxNjg4NjkzNDQ0LjYzMDMyNywiZXhwIjoxNzIwMjI5NDQ0LjUzOTMwOCwic3ViIjoiMTU5MDY4MzEiLCJzY29wZXMiOlsicHJvamVjdCJdLCJkb21haW4iOm51bGwsImFzc29jaWF0aW9ucyI6WyIqIl0sInNlc3Npb24iOjB9.G75ysBbqIrF1lKcnaE3v6YmiFfv5S9LBoaI0ryPW5ooIL54svV9B6PSHxZyQ_hO7gOCxew9DJYr_WK3PtOaFkmCm6wYmIVXrXbUgTqat63gzZvfEowIKgcpEkzWxg3fIDa7Ll7hzEuKch-gEXKAJCsf_CTux6J6vu_I05i1CuRC1Jruxmkz2d9J55xUXiOhh244wI0MZ_mMp-03oY-VnD2PAh3J5Hq91jhwEDxNerBnqycvp0Sqv564LxEI2eENusq4fhvoR8iKbdr8-1IUfMxoOiZ00bJYU-xPtQ83IWniXqoy3C5IU15AMtes5iLhoMVT8ObIumIwddld6bDbNzT-4gmLSmBlGX5_3RIO_p4FoDagQVzkgbE6fdXMimnBlYAeoOCAF6fu3L1dIbnBazTw_hRaSS_rj1LnEbTZncSpZ_qjNUS_dPwfsuNFgk_Ny1qeLFGru4urGa55UM4onB_nYrFjdDJmlh3Lpba9HOdPQbOthFXeL-zYkRtP6fCc_drkJjRxDmHN6FF-vo3V7sIyYUtoBRrQKZkxyBSQtGD1sGkgRvpVyiE_hl4rPGBZGiUEis1Gc2G0RrZ3aOparkgwe7cecseAeJSX_u1dXbH9RhDOxxG0ZQ3kHN-h1HnMe6L9SSDU3qMrkKn36tM-rRP0UsQHY9OdHWnBXrYvI8mU"
+"base_path": "."
+"base_url": "https://api.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+#
+files:
+  # JSON translation files
+  - source: /i18n/ja/**/*
+    translation: /i18n/%two_letters_code%/**/%original_file_name%
+  # Docs Markdown files
+  - source: /docs/**/*
+    translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
