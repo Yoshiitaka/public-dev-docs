@@ -12,7 +12,7 @@ description: PHP と Momento Cache を使ってコーディングするための
 より詳しい情報は、[GitHub 上の PHP SDK](https://github.com/momentohq/client-sdk-php) でご確認下さい。
 
 ### 前提条件
-* Momento 認証トークンが必要。 [Momento CLI](https://github.com/momentohq/momento-cli) を使って作成可能です。
+* Momento 認証トークンが必要。[Momento CLI](https://github.com/momentohq/momento-cli) を使って作成可能です。
 * PHP 8.0 以上をインストール。
 * [gRPC PHP 拡張モジュール](https://github.com/grpc/grpc/blob/v1.46.3/src/php/README.md) をインストール。
 * [Composer](https://getcomposer.org/doc/00-intro.md) をインストール - PHP でよく使われている依存管理ライブラリです。
@@ -20,6 +20,7 @@ description: PHP と Momento Cache を使ってコーディングするための
 ### PHP SDK を使うように composer を設定
 
 `composer.json` ファイルに私達のレポジトリを追加して、私達のSDK を依存として設定します:
+
 
 ```json
 {
@@ -103,7 +104,7 @@ if ($response->asSuccess()) {
 ```
 
 ## 項目をキャッシュに書き込む
-書込み操作を行うシンプルな例です。 client.set 呼出しでは、TTL はオプショナルです。 もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
+書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
 
 ```php
 // Set
@@ -134,6 +135,7 @@ if ($response->asHit()) {
 ```
 
 ## Delete the test cache
+## テストキャッシュを削除する
 ここで作成してテストキャッシュを削除する例です。
 
 ```php
@@ -147,5 +149,4 @@ if ($response->asError()) {
 
 :::info
 これらの API 呼出し以上のものは、[API リファレンスページ](/develop/api-reference/index.mdx)で Momento API 呼出しの全種類の詳しい情報をご確認下さい。
-:::
 :::
