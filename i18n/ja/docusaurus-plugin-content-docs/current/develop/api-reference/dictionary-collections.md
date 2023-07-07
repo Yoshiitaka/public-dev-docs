@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: Dictionary
 title: Dictionary API リファレンス
-description: Momento Cacheのコレクションdictionaryの使い方を学ぼう。
+説明: Momento Cacheのコレクションdictionaryの使い方を学ぼう。
 slug: /develop/api-reference/collections/dictionary
 ---
 
@@ -20,13 +20,13 @@ cacheからDictionaryを取得します。
 
 | 名前             | 型      | 説明                 |
 | -------------- | ------ | ------------------ |
-| cacheName      | String | 名前 of the cache.   |
+| cache名前        | String | 名前 of the cache.   |
 | dictionaryName | String | 取得するDictionaryの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
-DictionaryFetchで返却されるレスポンスオブジェクトの種類は３つあります。 cache hit、miss、errorです。
+DictionaryFetchで返却されるレスポンスオブジェクトの種類は３つあります。cache hit、miss、errorです。
 
 * Cache hit
     - `valueDictionaryBytesBytes()`: Map<Bytes, Bytes>
@@ -53,7 +53,7 @@ cache内のDictionaryアイテムから1つのfieldを取得します。
 | field          | String/Bytes | 取得するDictionary内のfieldの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Cache hit
     - `fieldString()`: String
@@ -87,7 +87,7 @@ cache内のDictionaryから1つ以上のfieldを取得します。
 | fields         | String[]/Bytes[] | 取得するDictionary内のfieldの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Cache hit
     - valueDictionaryBytesBytes(): Map<Bytes, Bytes>
@@ -128,7 +128,7 @@ cache内のDictionaryから1つ以上のfieldを取得します。
 | ttl            | [CollectionTTL object](./collection-ttl.md) | これはTTLコンストラクトとして返されます。                    |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Success
     - `value()`: integer - 追加が行われた後の新しい値
@@ -152,7 +152,7 @@ Dictionaryアイテムからfieldを削除します。
 | field          | String/Bytes | 取得するDictionary内のfieldの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Success
 * Error
@@ -173,7 +173,7 @@ Dictionaryアイテムから複数のfieldを削除します。
 | fields         | String[]/Bytes[] | 取得するDictionary内のfieldの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Success
 * Error
@@ -190,13 +190,13 @@ Dictionaryアイテムから複数のfieldを削除します。
 | 名前             | 型                                           | 説明                                                               |
 | -------------- | ------------------------------------------- | ---------------------------------------------------------------- |
 | cacheName      | String                                      | Cacheの名前。                                                        |
-| dictionaryName | String                                      | Name of the dictionary item to be set.                           |
+| dictionaryName | String                                      | Dictionaryの名前。                                                   |
 | field          | String/Bytes                                | 設定するDictionaryのfieldの名前。                                         |
 | value          | String/Bytes                                | 設定するfieldの値。                                                     |
-| ttl            | [CollectionTTL object](./collection-ttl.md) | Cache内のDictionaryのTTL。 このTTLはCacheクライアントの初期化時に使用されるTTLよりも優先されます。 |
+| ttl            | [CollectionTTL object](./collection-ttl.md) | Cache内のDictionaryのTTL。このTTL はCacheクライアントの初期化時に使用されるTTLよりも優先されます。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Success
 * Error
@@ -210,15 +210,15 @@ Dictionaryアイテムから複数のfieldを削除します。
 ### DictionarySetFields
 Dictionaryに複数のfield:valueのペアを設定します。 Dictionaryアイテムが存在しない場合は、新しいfieldを使用して作成されます。
 
-| 名前             | 型                                           | 説明                                                                |
-| -------------- | ------------------------------------------- | ----------------------------------------------------------------- |
-| cacheName      | String                                      | Cacheの名前。                                                         |
-| dictionaryName | String                                      | Name of the dictionary item to be set.                            |
-| fields         | String[]/Bytes[]                            | 設定操作によってディクショナリ項目に追加されるfield:valueのペア。                            |
-| ttl            | [CollectionTTL object](./collection-ttl.md) | Cache内のDictionaryのTTL。 このTTL はCacheクライアントの初期化時に使用されるTTLよりも優先されます。 |
+| 名前             | 型                                           | 説明                                                              |
+| -------------- | ------------------------------------------- | --------------------------------------------------------------- |
+| cacheName      | String                                      | Cacheの名前。                                                       |
+| dictionaryName | String                                      | Dictionaryの名前。                                                  |
+| fields         | String[]/Bytes[]                            | 設定操作によってディクショナリ項目に追加されるfield:valueのペア。                          |
+| ttl            | [CollectionTTL object](./collection-ttl.md) | Cache内のDictionaryのTTL。このTTLはCacheクライアントの初期化時に使用されるTTLよりも優先されます。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Success
 * Error
@@ -232,13 +232,13 @@ Dictionaryに複数のfield:valueのペアを設定します。 Dictionaryアイ
 ### DictionaryLength
 既存のDictionaryの長さを取得します
 
-| 名前             | 型      | 説明                                         |
-| -------------- | ------ | ------------------------------------------ |
-| cacheName      | String | Cacheの名前。                                  |
-| dictionaryName | String | Name of the dictionary item to be checked. |
+| 名前             | 型      | 説明             |
+| -------------- | ------ | -------------- |
+| cacheName      | String | Cacheの名前。      |
+| dictionaryName | String | Dictionaryの名前。 |
 
 <details>
-  <summary>メソッドのレスポンスオブジェクト</summary>
+  <summary>メソッドのレスポンスオブジェクト </summary>
 
 * Hit
   * `length()`: Number
