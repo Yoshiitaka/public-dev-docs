@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_class_name: sidebar-item-redis
 sidebar_label: Redis互換クライアント
-pagination_prev: null
+pagination_prev:
 title: Redis互換クライアント
 description: Redis互換クライアントを使用してMomento Cache、Momento Topicsに切り替える方法
 ---
