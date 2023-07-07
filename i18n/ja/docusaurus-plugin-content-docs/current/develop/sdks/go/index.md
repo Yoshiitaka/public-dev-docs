@@ -8,16 +8,18 @@ description: Momento Go SDK に関する情報です。
 
 # Momento Go SDK
 
+<img src="/img/gophers.png" width="90%" alt="a picture of gophers dancing." />
+
 ようこそ、Momento Go SDK のドキュメントへ！
 
-Momento Go SDK は GitHub 経由でインストール可能です: `go get github.com/momentohq/client-sdk-go`.
-
 ソースコードは GitHub にあります: [momentohq/client-sdk-go](https://github.com/momentohq/client-sdk-go).
+
+Momento Go SDK は GitHub 経由でインストール可能です: `go get github.com/momentohq/client-sdk-go`.
 
 ## 必要条件
 
 - [Go](https://go.dev/dl/)
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 
 ## リソース
 
@@ -26,6 +28,6 @@ Momento Go SDK は GitHub 経由でインストール可能です: `go get githu
 - まもなく: オブザーバビリティ: Go SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Go SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-まもなくです。
+COMING SOON
