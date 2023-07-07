@@ -8,25 +8,27 @@ description: Momento Java SDK に関する情報です。
 
 # Momento Java SDK
 
-ようこそ、Momento Java SDK のドキュメントへ！
+<img src="/img/java.png" width="90%" alt="a picture of abstract shapes with a coffee mug for java." />
 
-Momento Java SDK は Maven Central 経由で利用可能です: [`software.momento.java:sdk`](https://central.sonatype.com/artifact/software.momento.java/sdk).
+ようこそ、Momento Java SDK のドキュメントへ！
 
 ソースコードは GitHub にあります: [momentohq/client-sdk-java](https://github.com/momentohq/client-sdk-java).
 
+Momento Java SDK は Maven Central 経由で利用可能です: [`software.momento.java:sdk`](https://central.sonatype.com/artifact/software.momento.java/sdk).
+
 ## 必要条件
 
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 - 少なくとも java 8 ランタイムがインストールされている。
 - SDK をダウンロードするために、mvn または gradle
 
 ## リソース
 
-- まもなく: Java SDK チートシート
+- [まもなく: Java SDK チートシート](./cheat-sheet.mdx)
 - [Java SDK 例](https://github.com/momentohq/client-sdk-java/blob/main/examples/README.md): Java SDK の使い方をお見せするための動作可能なプロジェクト例です。
 - まもなく: オブザーバビリティ: Java SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Java SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-まもなくです。
+COMING SOON
