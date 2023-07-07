@@ -12,11 +12,12 @@ slug: /develop/api-reference/collections/collectionttl
 
 さまざまな状況に対応するために、名前付きのコンストラクタとコピーを提供することで、プロセスをより直感的に試せます。
 
-Momento Cache における TTL の仕組みについての詳細情報は、[TTL を使用したデータの有効期限切れ](../../../learn/how-it-works/expire-data-with-ttl)を参照してください。
+Momento Cache における TTL の仕組みについての詳細情報は、[TTL を使用したデータの有効期限切れ](../../../learn/how-it-works/expire-data-with-ttl)を参照してください。こちらのドキュメントでは、Momento Cache において TTL がデータの有効期限管理にどのように機能するかについて詳しく説明されています。
 
 ## Common method behaviors
 
-- もしも関数呼び出し時に CollectionTTL が指定されていない場合、デフォルト値として `CollectionTtl.fromCacheTtl()` が使用されます。 この値はキャッシュクライアントに設定された TTL です。
+- もしも関数呼び出し時に CollectionTTL が指定されていない場合、デフォルト値として `CollectionTtl.fromCacheTtl()` が使用されます。この値はキャッシュクライアントに設定された TTL です。
+
 - コレクションが変更されるたびに、コレクションの TTL は更新されます。
 
 ## Constructor parameters
@@ -31,7 +32,7 @@ Momento Cache における TTL の仕組みについての詳細情報は、[TTL
 
 - fromCacheTtl(): CollectionTtl - クライアントの TTL を使用し、`CollectionTtl(null, true)` と同等の動作をします。
 - of(ttl: duration): CollectionTtl - `CollectionTtl(ttl, true)` と同等の動作をします。
-- refreshTtlIfProvided(ttl?: duration): CollectionTtl - もし値が指定されている場合、アイテムの TTL を更新します。 値が指定されていない場合、TTL は更新されません。
+- refreshTtlIfProvided(ttl?: duration): CollectionTtl - もし値が指定されている場合、アイテムの TTL を更新します。値が指定されていない場合、TTL は更新されません。
 
 ## Instance methods
 
