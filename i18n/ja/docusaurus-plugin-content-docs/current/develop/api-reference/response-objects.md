@@ -9,11 +9,11 @@ slug: /develop/api-reference/response-objects
 
 # Momento API からのレスポンスオブジェクト
 
-これらはすべてのコマンドの基本的なレスポンスです。一部のコマンドでは、追加のデータや機能が提供される場合もあります。
+これらはすべてのコマンドの基本的なレスポンスです。 一部のコマンドでは、追加のデータや機能が提供される場合もあります。
 
-コマンドは、*一般的*に2つのカテゴリに分類されます。以下のようなレスポンスを返すものがあります。
-1. **Success or Error** - 例えば、Set 操作はその一例です。キャッシュにアイテムが正常に書き込まれた場合とエラーが発生した場合の2つのレスポンスがあります。
-2. **Hit, Miss, or Error** - 例えば、Get 操作はその一例です。要求されたアイテムがキャッシュに存在する場合、キャッシュヒットとなります。キャッシュに存在しない場合はキャッシュミスとなります。エラーが発生した場合はエラーとなります。
+コマンドは、*一般的*に2つのカテゴリに分類されます。 以下のようなレスポンスを返すものがあります。
+1. **Success or Error** - 例えば、Set 操作はその一例です。 キャッシュにアイテムが正常に書き込まれた場合とエラーが発生した場合の2つのレスポンスがあります。
+2. **Hit, Miss, or Error** - 例えば、Get 操作はその一例です。 要求されたアイテムがキャッシュに存在する場合、キャッシュヒットとなります。 キャッシュに存在しない場合はキャッシュミスとなります。 エラーが発生した場合はエラーとなります。
 
 ## Error
 
@@ -27,7 +27,7 @@ slug: /develop/api-reference/response-objects
 
 - message(): String - 読みやすいエラーメッセージ
 - innerException(): Exception - 元の例外
-- errorCode(): MomentoErrorCode - Momento 独自のエラーカテゴリ（例：InvalidArgument や BadRequest ）を指します。詳細は [Standards And Practices - Error Handling](https://github.com/momentohq/standards-and-practices/blob/main/docs/client-specifications/error-handling.md)を参照してください。
+- errorCode(): MomentoErrorCode - Momento 独自のエラーカテゴリ（例：InvalidArgument や BadRequest ）を指します。 詳細は [Standards And Practices - Error Handling](https://github.com/momentohq/standards-and-practices/blob/main/docs/client-specifications/error-handling.md)を参照してください。
 - toString(): String - message() のエイリアスです。
 
 ## Success
@@ -36,7 +36,7 @@ slug: /develop/api-reference/response-objects
 
 ## Hit
 
-キーまたはフィールドはキャッシュに存在します。通常、値を返すように拡張されます。
+キーまたはフィールドはキャッシュに存在します。 通常、値を返すように拡張されます。
 
 ## Miss
 
