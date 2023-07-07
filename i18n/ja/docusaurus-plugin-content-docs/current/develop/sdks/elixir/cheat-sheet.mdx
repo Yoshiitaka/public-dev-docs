@@ -13,7 +13,7 @@ import { SdkExampleCodeBlockImpl } from "@site/src/components/SdkExampleCodeBloc
 
 # Momento Cache を Elixir で使うためのチートシート
 
-You can find complete, working examples in the [Elixir SDK GitHub repo examples directory](https://github.com/momentohq/client-sdk-elixir/tree/main/examples). 実行可能な完成された例は [Elixir SDK GitHub レポジトリの examples ディレクトリ](https://github.com/momentohq/client-sdk-elixir/tree/main/examples)をご覧下さい。
+このページでは、Momento Cache を Go で素早く使ってみたい方のために必要となる基礎的な API 呼出しを解説しています。このコードのファイル全体は[Elixir SDK のページをご確認下さい](https://github.com/momentohq/client-sdk-elixir/tree/main/examples)。
 
 ## Momento SDK をインストール
 
@@ -22,8 +22,7 @@ You can find complete, working examples in the [Elixir SDK GitHub repo examples 
 ## 認証トークンを設定
 
 Momento で認証するためには Momento 認証トークンが必要になります。[Momento ウェブコンソール](https://console.gomomento.com/caches)から取得可能です。
-トークンを取得したら、環境変数に格納して Momento クライアントから使えるようにします:  You can get one from the [Momento Web Console](https://console.gomomento.com/caches).
-Once you have your token, store it in an environment variable so that the Momento client can consume it:
+トークンを取得したら、環境変数に格納して Momento クライアントから使えるようにします:
 
 ```
 export MOMENTO_AUTH_TOKEN=<your Momento token here>
@@ -49,7 +48,7 @@ export MOMENTO_AUTH_TOKEN=<your Momento token here>
 
 ## 項目をキャッシュに書き込む
 
-A simple example of doing a set operation. In the CacheClient.set() call, the TTL is optional. 書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
+書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
 
 <SdkExampleCodeBlock language={'elixir'} snippetId={'API_Set'} />
 
@@ -62,6 +61,7 @@ A simple example of doing a set operation. In the CacheClient.set() call, the TT
 ## コードを実行する
 
 You can find complete, working examples in the [Elixir SDK GitHub repo examples directory](https://github.com/momentohq/client-sdk-elixir/tree/main/examples).
+実行可能な完成された例は [Elixir SDK GitHub レポジトリの examples ディレクトリ](https://github.com/momentohq/client-sdk-elixir/tree/main/examples)をご覧下さい。
 
 :::info null
 これらの API 呼出し以上のものは、[API リファレンスページ](/develop/api-reference/index.mdx)で Momento API 呼出しの全種類の詳しい情報をご確認下さい。
