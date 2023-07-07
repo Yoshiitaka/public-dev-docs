@@ -9,8 +9,8 @@ slug: /develop/api-reference/collections/list
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
 // This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
-# MomentoキャッシュのリストAPIリファレンス
-このページでは、 [コレクションデータ型](./../datatypes.md#list-collections)のMomentoAPIメソッドについて説明します。
+# Momento CacheのDictionary APIリファレンス
+このページでは、 [コレクションデータ型](./../datatypes.md#list-collections)のMomentoAPIメソッドについて詳しく説明します。
 
 ## List methods
 
