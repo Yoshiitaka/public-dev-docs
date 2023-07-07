@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Momento Elixir SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Elixir
 description: Momento Elixir SDK に関する情報です。
 ---
