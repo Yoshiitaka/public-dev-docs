@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 title: Momento Java SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Java
 description: Momento Java SDK に関する情報です。
 ---
