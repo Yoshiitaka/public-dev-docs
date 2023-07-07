@@ -11,7 +11,7 @@ description: Python と Momento Cache を使ってコーディングするため
 
 :::tip
 
-もしこのページにある全ての関数を1つの python ファイルにまとめた場合、それが他の python コードからインポートして呼び出すことができる関数の集合として使うことができます。 加えて、もしこのコードを本番環境で利用する場合には、print() 呼出しを python のロギングライブラリ (`import logging`) に置き換えることになるでしょう。 [こちらをクリックして](../../../../../../../static/code/cheat-sheets/MomentoBasics.py)全ての関数を持ったクラスファイルもご確認下さい。
+もしこのページにある全ての関数を1つの python ファイルにまとめた場合、それが他の python コードからインポートして呼び出すことができる関数の集合として使うことができます。加えて、もしこのコードを本番環境で利用する場合には、print() 呼出しを python のロギングライブラリ (`import logging`) に置き換えることになるでしょう。[こちらをクリックして](../../../../../../../static/code/cheat-sheets/MomentoBasics.py)全ての関数を持ったクラスファイルもご確認下さい。
 
 :::
 
@@ -67,7 +67,7 @@ def list_caches(client) -> None:
     print("")
 ```
 ## 項目をキャッシュに書き込む
-書込み操作を行うシンプルな例です。 client.set 呼出しでは、TTL はオプショナルです。 もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
+書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
 ```python
 def set(client, cache_name, key, value, ttl=None):
   resp = client.set(cache_name, key, value, ttl)
@@ -95,7 +95,7 @@ def get(client, cache_name, key):
 ```
 
 ## キャッシュ内の項目の値を増加する
-キーに対する値を増加させる例です。 正または負の整数を渡すことができます。
+キーに対する値を増加させる例です。正または負の整数を渡すことができます。
 ```python
 def incr(client, cache_name, key, value:int = 1):
   resp = client.increment(cache_name, key, value)
@@ -111,7 +111,6 @@ def incr(client, cache_name, key, value:int = 1):
 :::info
 これらの API 呼出し以上のものは、[API リファレンスページ](/develop/api-reference/index.mdx)で Momento API 呼出しの全種類の詳しい情報をご確認下さい。
 :::
-:::
 
 ## 利用に関する覚書
-これらの関数では、まず CacheClient オブジェクトを返す `create_client()` を呼び出します。 そしてそのオブジェクトを後続の関数に渡します。 この方法では、Momento への複数の呼出しに対して CacheClient を再利用するので、より効率の良い呼出しになります。 [こちらクリックして](../../../../../../../static/code/cheat-sheets/MomentoBasics.py)全ての関数を持ったクラスファイルもご確認下さい。
+これらの関数では、まず CacheClient オブジェクトを返す `create_client()` を呼び出します。そしてそのオブジェクトを後続の関数に渡します。この方法では、Momento への複数の呼出しに対して CacheClient を再利用するので、より効率の良い呼出しになります。[こちらクリックして](../../../../../../../static/code/cheat-sheets/MomentoBasics.py)全ての関数を持ったクラスファイルもご確認下さい。
