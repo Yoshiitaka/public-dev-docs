@@ -15,25 +15,13 @@ import TabItem from '@theme/TabItem';
 
 もし Momento Cache を SDK から使ってみる方法をお探しでしたら、ここはあなたにうってつけの場所です。
 
-If you want to quickly get a feel for the Momento Cache experience without installing any software? もし何もインストールせずに Momento Cache の体験を手早くしてみたい場合には、こちらから[ブラウザ内で](#cli-と-sdk-をブラウザで試してみる)試してみることもできます。
+もし何もインストールせずに Momento Cache の体験を手早くしてみたい場合には、こちらから[ブラウザ内で](#cli-と-sdk-をブラウザで試してみる)試してみることもできます。
 
 ## ステップ 1: Momento コンソールにサインアップしてログインする
 
 [Momento コンソールに行き](https://console.gomomento.com/)、手順に従ってメールアドレス、Google アカウント、または GitHub アカウントでログインします。
 
 ![image](/img/getting-started/console.png)
-
-:::info
-
-Momento Console does not currently support the ability to share access to caches between accounts. Momento organizations is coming soon to solve this. In the meantime, we recommend you use internal email lists to manage cache access across your team.
-
-For instance:
-- momento+prod@yourcompany.com
-- momento+dev@yourcompany.com
-
-With this, you can control mailing list access. To login into Momento Console, simply use this mailing list and Momento will send a sign in code via email to the mailing list. Then anyone with access to the mailing list will be able to sign in and view Momento Caches.
-
-:::
 
 ## ステップ 2: Momento コンソールで認証トークンを作成する
 
@@ -45,13 +33,13 @@ Token ページ上で、1. クラウドプロバイダーを選択し、2. ド�
 
 ![image](/img/getting-started/select-provider-region.png)
 
-下の方にスクロールすると、灰色の箱の中にトークンがあります。 下のスクリーンショットではトークンにぼかしが入っていますが、本来は見ることができます。 コピーアイコンをクリックして、トークンをクリップボードにコピーします。
+下の方にスクロールすると、灰色の箱の中にトークンがあります。下のスクリーンショットではトークンにぼかしが入っていますが、本来は見ることができます。コピーアイコンをクリックして、トークンをクリップボードにコピーします。
 
 ![image](/img/getting-started/generated-token.jpg)
 
 ## ステップ 3: 認証トークンを保存する
 
-Momento の認証に使うために、この認証トークンを保存できる場所がいつくかあります。 今回の単純な例では、認証トークンを環境変数に保存しますが、AWS Secrets Manager や GCP Secret Manager の様なところに認証トークンを保存するのがベストプラクティスです。
+Momento の認証に使うために、この認証トークンを保存できる場所がいつくかあります。今回の単純な例では、認証トークンを環境変数に保存しますが、AWS Secrets Manager や GCP Secret Manager の様なところに認証トークンを保存するのがベストプラクティスです。
 
 ## ステップ 4: SDK を入れて、キャッシュを作成し、データを読み書きする
 
@@ -68,9 +56,6 @@ npm install dotenv
 **.env ファイルを作成する**
 
 Momento 認証トークンと、デフォルトの TTL (秒) を設定するために、 .env ファイルをディレクトリ上に作成します。
-
-```cli
-export MOMENTO_AUTH_TOKEN=
 
 ```cli
 export MOMENTO_AUTH_TOKEN=<your Momento token here>
@@ -195,45 +180,42 @@ Cache hit:  12345
 
 ## CLI と SDK をブラウザ上で試してみる
 
-Momento Cache をブラウザ上で今すぐに試してみることができます。 ソフトウェアのインストールは必要ありません！
+Momento Cache をブラウザ上で今すぐに試してみることができます。ソフトウェアのインストールは必要ありません！
 
 :::note
-Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスです。 It does not deploy any resources in your (AWS, GCP, Azure, etm.) accounts.
+Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスです。皆さんの (AWS、GCP、Azure、等) のアカウントには何もデプロイされません。
 :::
 
 <br />
 
-まず、無料の認証トークンをリクエストし、CLI に設定し、 `set` と `get` コマンドをあなたのキャッシュに対して実行してみます。 以下を立ち上げて下さい。
+まず、無料の認証トークンをリクエストし、CLI に設定し、 `set` と `get` コマンドをあなたのキャッシュに対して実行してみます。以下を立ち上げて下さい。
 
-<a href="https://play.instruqt.com/embed/momento/tracks/sandbox-container-1challenge?token=em_54kTDywfWaG95-rC&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser" target="_top"><img src="/img/cli_lab.png" alt="CLI lab" /></a>
-
-<br />
-<br />
-
-次に、認証トークンとキャッシュを使って、Node.js SDK を使った JavaScript のアプリケーションを作成し実行してみます。 以下を立ち上げて下さい。
-
-<a href="https://play.instruqt.com/embed/momento/tracks/momento-nodejs-demo?token=em_f8PM8Aob-mHIfOTT&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser" target="_top"><img src="/img/sdk_lab.png" alt="SDK lab" /></a>
+[![image](/img/cli_lab.png)](https://play.instruqt.com/embed/momento/tracks/sandbox-container-1challenge?token=em_54kTDywfWaG95-rC&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser)
 
 <br />
 <br />
 
-Momento Topics も試してみたいですか？ このデモでは、一方の画面でトピックのメッセージをサブスクライブし、もう一方の画面ではそのトピックにメッセージをパブリッシュすることができます。 以下を立ち上げて下さい。
+次に、認証トークンとキャッシュを使って、Node.js SDK を使った JavaScript のアプリケーションを作成し実行してみます。以下を立ち上げて下さい。
 
-<a href="https://play.instruqt.com/embed/momento/tracks/topics-on-the-momento-cli?token=em_Q_mgzhVtWtP5B_jj&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser" target="_top"><img src="/img/topics_lab.png" alt="Topics lab" /></a>
+[![image](/img/sdk_lab.png)](https://play.instruqt.com/embed/momento/tracks/momento-nodejs-demo?token=em_f8PM8Aob-mHIfOTT&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser)
 
 <br />
 <br />
 
+Momento Topics も試してみたいですか？このデモでは、一方の画面でトピックのメッセージをサブスクライブし、もう一方の画面ではそのトピックにメッセージをパブリッシュすることができます。以下を立ち上げて下さい。
 
+[![image](/img/topics_lab.png)](https://play.instruqt.com/embed/momento/tracks/topics-on-the-momento-cli?token=em_Q_mgzhVtWtP5B_jj&finish_btn_target=_top&finish_btn_text=Return+to+Docs&finish_btn_url=https%3A%2F%2Fdocs.momentohq.com%2Fgetting-started#try-our-cli-and-an-sdk-in-your-browser)
 
+<br />
+<br />
 
 ## Momento CLIのインストール
 
-CLIをローカル(Linux, Windows, Mac)にインストールすることも可能です。 [こちらのリポ](https://github.com/momentohq/momento-cli) より最新のCLIやインストール方法また使用方法などを確認できます。
+CLIをローカル(Linux, Windows, Mac)にインストールすることも可能です。[こちらのリポ](https://github.com/momentohq/momento-cli) より最新のCLIやインストール方法また使用方法などを確認できます。
 
 ## Momento SDK 一覧
 
-現在、以下の言語の SDK が利用可能です。
+現在、以下の言語の SDK が利用可能です。各レポジトリで、詳細な手順と利用例をご確認下さい。
 
 - [Node.js](/develop/sdks/nodejs)
 - [JavaScript Web SDK](/develop/sdks/web)
@@ -246,6 +228,7 @@ CLIをローカル(Linux, Windows, Mac)にインストールすることも可�
 - [Ruby](/develop/sdks/ruby)
 
 ## FAQ
+
 <details>
-  <summary>Momento は私のクラウドアカウントに何かしらのリソースをデプロイしますか？ </summary>
-いいえ、しません。 Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスであり、皆さんのアプリケーションコードから呼び出して使います。 </details>
+  <summary>Momento は私のクラウドアカウントに何かしらのリソースをデプロイしますか？</summary>
+いいえ、しません。Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスであり、皆さんのアプリケーションコードから呼び出して使います。 </details>
