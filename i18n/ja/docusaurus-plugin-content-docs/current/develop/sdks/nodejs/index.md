@@ -8,6 +8,8 @@ description: Momento Node.js SDK に関する情報です。
 
 # Momento Node.js SDK
 
+<img src="/img/nodes.png" width="90%" alt="a picture of abstract shapes as building and nodes of data connecting them at high speed" />
+
 ようこそ、Momento Node.js SDK のドキュメントへ！
 
 Momento Node.js SDK は [`@gomomento/sdk`](https://www.npmjs.com/package/@gomomento/sdk) の npm パッケージとして利用可能です。
@@ -17,7 +19,7 @@ Momento Node.js SDK は [`@gomomento/sdk`](https://www.npmjs.com/package/@gomome
 ## 必要条件
 
 - Node のバージョンは [14以上](https://nodejs.org/en/download/) が必要です。
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 
 ## リソース
 
@@ -26,7 +28,7 @@ Momento Node.js SDK は [`@gomomento/sdk`](https://www.npmjs.com/package/@gomome
 - まもなく: オブザーバビリティ: Node.js SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Node.js SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-- [`@redis/client` のための Redis 互換クライアント](https://github.com/momentohq/momento-node-redis-client) - 既存の `@redis/client` を使ったコードを置き換えるだけで Momento Cache を利用可能に！こちらの [Redis クライアント互換性](/develop/integrations/redis-client-compatibility.md) ページもご覧下さい。
-- [`ioredis` のための Redis 互換クライアント](https://github.com/momentohq/momento-node-ioredis-client) - 既存の `ioredis` を使ったコードを置き換えるだけで Momento Cache を利用可能に！こちらの [Redis クライアント互換性](/develop/integrations/redis-client-compatibility.md) ページもご覧下さい。
+- [`@redis/client` のための Redis 互換クライアント](https://github.com/momentohq/momento-node-redis-client) - 既存の `@redis/client` を使ったコードを置き換えるだけで Momento Cache を利用可能に！ こちらの [Redis クライアント互換性](/develop/integrations/redis-client-compatibility.md) ページもご覧下さい。
+- [`ioredis` のための Redis 互換クライアント](https://github.com/momentohq/momento-node-ioredis-client) - 既存の `ioredis` を使ったコードを置き換えるだけで Momento Cache を利用可能に！ こちらの [Redis クライアント互換性](/develop/integrations/redis-client-compatibility.md) ページもご覧下さい。
