@@ -42,7 +42,7 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetAddElement'} />
 
 ### SetAddElements
-Adds multiple elements to a set item.
+Adds multiple elements to a set item. If the set item does not already exist, this method will create one.
 
 | Name      | Type                                        | Description                                                                                                             |
 | --------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -91,7 +91,7 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetFetch'} />
 
 ### SetRemoveElement
-Removes a single element from an existing set item.
+Removes a single element from an existing set item. If the set is emptied as a result, the item is deleted.
 
 | Name      | Type      | Description                                      |
 | --------- | --------- | ------------------------------------------------ |
@@ -112,13 +112,13 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetRemoveElement'} />
 
 ### SetRemoveElements
-Removes multiple elements from an existing set item.
+Removes multiple elements from an existing set item. If the set is emptied as a result, the item is deleted.
 
 | Name      | Type        | Description                                         |
 | --------- | ----------- | --------------------------------------------------- |
 | cacheName | String      | Name of the cache.                                  |
 | setName   | String      | Name of the set item to be altered.                 |
-| elements  | String[] \ | Bytes[] | Elements to be removed by this operation. |
+| element   | String[] \ | Bytes[] | Elements to be removed by this operation. |
 
 <details>
   <summary>Method response object</summary>
