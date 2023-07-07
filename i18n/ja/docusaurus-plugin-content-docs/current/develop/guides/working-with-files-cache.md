@@ -3,7 +3,7 @@ sidebar_position: 4
 sidebar_label: Working with files
 title: Adding and retrieving files in a cache
 description: Learn to add and retrieve files from Momento Cache with hands on code samples.
-pagination_next: null
+pagination_next:
 ---
 
 import Tabs from '@theme/Tabs';
@@ -11,11 +11,9 @@ import TabItem from '@theme/TabItem';
 
 # Add and retrieve a file with Momento Cache
 
-An item in Momento Cache is a byte array, so a cache can easily store most any file you want to create, as long as it is
-under the [per item limit of 1MB](/manage/limits).
+An item in Momento Cache is a byte array, so a cache can easily store most any file you want to create, as long as it is under the [per item limit of 1MB](/manage/limits).
 
-Here is an example of reading a file from the filesystem, saving the file to an item in a cache, reading it from the
-cache, and then writing it to the filesystem.
+Here is an example of reading a file from the filesystem, saving the file to an item in a cache, reading it from the cache, and then writing it to the filesystem.
 <Tabs>
 <TabItem value="nodejs" label="Node.js" default>
 
