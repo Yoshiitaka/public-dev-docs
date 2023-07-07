@@ -1,7 +1,7 @@
 ---
 sidebar_position: 5
 title: Momento Go SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Go
 description: Momento Go SDK に関する情報です。
 ---
