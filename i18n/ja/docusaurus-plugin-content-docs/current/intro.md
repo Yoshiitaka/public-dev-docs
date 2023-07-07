@@ -4,7 +4,7 @@ sidebar_class_name: sidebar-item-overview
 sidebar_label: Momento キャッシュとトピックス
 title: Momentoキャッシュとトピックスのドキュメント
 description: Learn what you need to know to speed up your cloud application with the world's easiest serverless cache.
-pagination_next: null
+pagination_next:
 slug: /
 ---
 
