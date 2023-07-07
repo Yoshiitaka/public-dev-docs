@@ -9,7 +9,7 @@ description: Momento Elixir SDK に関する情報です。
 # Momento Elixir SDK
 
 ようこそ、Momento Elixir SDK のドキュメントへ！
-<img src="/ja/img/elixir.jpg" width="90%" alt="a picture of a fantasy dwarf with an water-based elixir." />
+<img src="/img/elixir.jpg" width="90%" alt="a picture of a fantasy dwarf with an water-based elixir." />
 
 Momento Elixir SDK は [`gomomento`](https://hex.pm/packages/gomomento) の hex パッケージとして利用可能です。
 
@@ -18,7 +18,7 @@ Momento Elixir SDK は [`gomomento`](https://hex.pm/packages/gomomento) の hex 
 ## 必要条件
 
 - [Elixir バージョン 1.14](https://elixir-lang.org/install.html) 又はそれ以上が必要です。
-- Momento 認証トークンが必要です。[Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
+- Momento 認証トークンが必要です。 [Momento ウェブコンソール](https://console.gomomento.com/)から取得可能です。
 
 ## リソース
 
@@ -27,6 +27,6 @@ Momento Elixir SDK は [`gomomento`](https://hex.pm/packages/gomomento) の hex 
 - まもなく: オブザーバビリティ: Elixir SDK を使ったロギングとクライアントサイドのメトリクス
 - まもなく: コードを本番環境へ: Elixir SDK での設定とエラーハンドリング
 
-## 連携
+## Integrations
 
-まもなくです。
+COMING SOON
