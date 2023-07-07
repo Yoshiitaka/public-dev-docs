@@ -4,7 +4,7 @@ sidebar_label: チートシート
 sidebar_class_name: sidebar-item-go
 title: Go のためのチートシート
 description: Momento Cache を Go を使ってすぐにコードを書き始めましょう
-pagination_next: null
+pagination_next:
 ---
 
 # Momento Cache を Go で使うためのチートシート
@@ -45,30 +45,30 @@ go get github.com/momentohq/client-sdk-go
 package main
 
 import (
-	"context"
-	"log"
-	"time"
+    "context"
+    "log"
+    "time"
 
-	"github.com/momentohq/client-sdk-go/auth"
-	"github.com/momentohq/client-sdk-go/config"
-	"github.com/momentohq/client-sdk-go/momento"
-	"github.com/momentohq/client-sdk-go/responses"
+    "github.com/momentohq/client-sdk-go/auth"
+    "github.com/momentohq/client-sdk-go/config"
+    "github.com/momentohq/client-sdk-go/momento"
+    "github.com/momentohq/client-sdk-go/responses"
 
     // We use this module to generate random keys and data later
-	"github.com/google/uuid"
+    "github.com/google/uuid"
 )
 
 func main() {
-	ctx := context.Background()
-	var credentialProvider, err = auth.NewEnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN")
-	if err != nil {
-		panic(err)
-	}
+    ctx := context.Background()
+    var credentialProvider, err = auth.NewEnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN")
+    if err != nil {
+        panic(err)
+    }
 
-	const (
-		cacheName             = "my-test-cache"
-		itemDefaultTTLSeconds = 60
-	)
+    const (
+        cacheName             = "my-test-cache"
+        itemDefaultTTLSeconds = 60
+    )
 ```
 
 ## Momento Cache に新しいキャッシュを作成する
