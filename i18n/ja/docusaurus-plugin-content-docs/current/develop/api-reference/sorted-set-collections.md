@@ -7,9 +7,7 @@ slug: /develop/api-reference/collections/sortedsets
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl
-import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
 # Sorted set collections
 
@@ -25,13 +23,13 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 - セットが存在する場合、その値が存在しなければその要素はソート済みセットに追加されます。その要素の値が存在する場合、その要素は上書きされます。
 
-| 名前            | 型               | 説明                                   |
-| --------------- | ------------------ | --------------------------------------------- |
-| cacheName       | String             | キャッシュの名前                            |
-| setName         | String             | 変更対象のソート済みセットアイテムの名前 |
-| value        | String \| Byte[] | この操作によってソート済みセットに追加される要素の値。 |
-| score        | number | この操作によってソート済みセットに追加される要素のスコア。 |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
+| 名前        | 型                                           | 説明                                                                                  |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| cacheName | String                                      | キャッシュの名前                                                                            |
+| setName   | String                                      | 変更対象のソート済みセットアイテムの名前                                                                |
+| value     | String \                                   | Byte[] | この操作によってソート済みセットに追加される要素の値。                                                |
+| score     | number                                      | この操作によってソート済みセットに追加される要素のスコア。                                                       |
+| ttl       | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
 
 <details>
   <summary>Method response object</summary>
@@ -53,12 +51,12 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 - セットが存在する場合、配列内の各[SortedSetElement](#sortedsetelement)について、その値が存在しなければ要素はソート済みセットに追加されます。その要素の値が存在する場合、その要素は上書きされます。
 
-| 名前            | 型               | 説明                                   |
-| --------------- | ------------------ | --------------------------------------------- |
-| cacheName       | String             | キャッシュの名前                            |
-| setName         | String             | 変更対象のソート済みセットアイテムの名前 |
-| elements        | [SortedSetElement](#sortedsetelement)[] | この操作によってソート済みセットに追加される要素。 |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
+| 名前        | 型                                           | 説明                                                                                  |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| cacheName | String                                      | キャッシュの名前                                                                            |
+| setName   | String                                      | 変更対象のソート済みセットアイテムの名前                                                                |
+| elements  | [SortedSetElement](#sortedsetelement)[]     | この操作によってソート済みセットに追加される要素。                                                           |
+| ttl       | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
 
 <details>
   <summary>Method response object</summary>
@@ -76,13 +74,13 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 ランクによるフィルタリングをオプションで適用しつつ、ソート済みセットの要素を取得し、昇順または降順で返します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | キャッシュの名前                            |
-| setName         | String          | ソート済みセットアイテムの名前 |
-| startRank | Optional[integer]   | 開始のランクの結果（を含む）。デフォルトは0となっています。 |
-| endRank | Optional[integer]   | 終了のランク（を含まない）。デフォルトはnull。最後のランクまでの要素を含む。 |
-| order           | Ascending \| Descending | ソート済みセットを返す順序。 |
+| 名前        | 型                 | 説明                                       |
+| --------- | ----------------- | ---------------------------------------- |
+| cacheName | String            | キャッシュの名前                                 |
+| setName   | String            | ソート済みセットアイテムの名前                          |
+| startRank | Optional[integer] | 開始のランクの結果（を含む）。デフォルトは0となっています。           |
+| endRank   | Optional[integer] | 終了のランク（を含まない）。デフォルトはnull。最後のランクまでの要素を含む。 |
+| order     | Ascending \      | Descending | ソート済みセットを返す順序。              |
 
 <details>
   <summary>Method response object</summary>
@@ -102,15 +100,15 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 スコアによるフィルタリングをオプションで適用しつつ、ソート済みセットの要素を取得し、昇順または降順で返します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | キャッシュの名前                            |
-| setName         | String          | ソート済みセットアイテムの名前 |
-| minScore | Optional[double]   | 結果の下限となるスコア（を含む）。デフォルトは-inf、つまり最低となるスコアを含むまでです。 |
-| maxScore | Optional[double]   | 結果の上限となるスコア（を含む）。デフォルトは+inf、つまり最高となるスコアを含むまでです。 |
-| order           | Ascending \| Descending | ソート済みセットを返す順序。 |
-| offset           | Optional[int] | フィルタリングされたリストの開始位置（を含む）から結果を返し始めるオフセットです。デフォルトは0でフィルタリングしない。指定された場合、マイナスの値は指定できません。 |
-| count           | Optional[int] | フィルタリングされたリストから返す結果の総数。デフォルトはnullで、制限はありません。指定された場合、必ず正の値である必要があります。 |
+| 名前        | 型                | 説明                                                                                  |
+| --------- | ---------------- | ----------------------------------------------------------------------------------- |
+| cacheName | String           | キャッシュの名前                                                                            |
+| setName   | String           | ソート済みセットアイテムの名前                                                                     |
+| minScore  | Optional[double] | 結果の下限となるスコア（を含む）。デフォルトは-inf、つまり最低となるスコアを含むまでです。                                     |
+| maxScore  | Optional[double] | 結果の上限となるスコア（を含む）。デフォルトは+inf、つまり最高となるスコアを含むまでです。                                     |
+| order     | Ascending \     | Descending | ソート済みセットを返す順序。                                                         |
+| offset    | Optional[int]    | フィルタリングされたリストの開始位置（を含む）から結果を返し始めるオフセットです。デフォルトは0でフィルタリングしない。指定された場合、マイナスの値は指定できません。 |
+| count     | Optional[int]    | フィルタリングされたリストから返す結果の総数。デフォルトはnullで、制限はありません。指定された場合、必ず正の値である必要があります。                |
 
 <details>
   <summary>Method response object</summary>
@@ -130,11 +128,11 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 ソート済みセットから、値によってインデックス付けられた要素のスコアを取得します。
 
-| 名前             | 型                | 説明                                   |
-| ---------------- | ------------------- | --------------------------------------------- |
-| cacheName        | String              | キャッシュの名前                             |
-| setName          | String              | ソート済みセットアイテムの名前 |
-| value           | String \| Bytes | スコアを取得する値。 |
+| 名前        | 型         | 説明                 |
+| --------- | --------- | ------------------ |
+| cacheName | String    | キャッシュの名前           |
+| setName   | String    | ソート済みセットアイテムの名前    |
+| value     | String \ | Bytes | スコアを取得する値。 |
 
 <details>
   <summary>Method response object</summary>
@@ -154,11 +152,11 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 ソート済みセットから、値によってインデックス付けられた要素のスコアを取得します。複数の要素に関連するスコアを取得します。
 
-| 名前             | 型                | 説明                                   |
-| ---------------- | ------------------- | --------------------------------------------- |
-| cacheName        | String              | キャッシュの名前                             |
-| setName          | String              | ソート済みセットアイテムの名前 |
-| values           | String[] \| Bytes[] | スコアを取得する値の配列。 |
+| 名前        | 型           | 説明                      |
+| --------- | ----------- | ----------------------- |
+| cacheName | String      | キャッシュの名前                |
+| setName   | String      | ソート済みセットアイテムの名前         |
+| values    | String[] \ | Bytes[] | スコアを取得する値の配列。 |
 
 <details>
   <summary>Method response object</summary>
@@ -181,11 +179,11 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 値によってインデックス付けられたソート済みセットから要素を削除します。
 
-| 名前            | 型             | 説明                                   |
-| --------------- | ---------------- | --------------------------------------------- |
-| cacheName       | String           | キャッシュの名前                             |
-| setName         | String           | Name of the set item to be altered. |
-| value          | String \| Bytes | この操作によって削除される要素の値。 |
+| 名前        | 型         | 説明                                  |
+| --------- | --------- | ----------------------------------- |
+| cacheName | String    | キャッシュの名前                            |
+| setName   | String    | Name of the set item to be altered. |
+| value     | String \ | Bytes | この操作によって削除される要素の値。          |
 
 <details>
   <summary>Method response object</summary>
@@ -203,11 +201,11 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 値によってインデックス付けられたソート済みセットから要素を削除します。
 
-| 名前            | 型             | 説明                                   |
-| --------------- | ---------------- | --------------------------------------------- |
-| cacheName       | String           | キャッシュの名前                             |
-| setName         | String           | 変更対象のセットアイテムの名前。 |
-| values          | String[] \| Bytes[] | この操作によって削除される要素の値。 |
+| 名前        | 型           | 説明                           |
+| --------- | ----------- | ---------------------------- |
+| cacheName | String      | キャッシュの名前                     |
+| setName   | String      | 変更対象のセットアイテムの名前。             |
+| values    | String[] \ | Bytes[] | この操作によって削除される要素の値。 |
 
 これにより、個別の要素または特定のグループの要素を削除することができます。
 
@@ -227,11 +225,11 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 指定されたソート済みセット内の要素の位置は何番目かを知ることができます。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | キャッシュの名前                             |
-| setName         | String          | 変更対象のソート済みセットアイテムの名前。    |
-| value           | String \| Bytes | スコアを取得する要素の値。 |
+| 名前        | 型         | 説明                    |
+| --------- | --------- | --------------------- |
+| cacheName | String    | キャッシュの名前              |
+| setName   | String    | 変更対象のソート済みセットアイテムの名前。 |
+| value     | String \ | Bytes | スコアを取得する要素の値。 |
 
 <details>
   <summary>Method response object</summary>
@@ -263,13 +261,13 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 - ソート済みセットに要素が存在しない場合、SortedSetIncrementScore(cacheName, setName, value, 10) は要素のスコアを10に設定します。
 - 既存の要素が値:スコアの組み合わせで "{ 'KesselRun' : 12 }" である場合、SortedSetIncrementScore(cacheName, setName, value, 10) は要素のスコアを22に設定します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | キャッシュの名前                             |
-| setName         | String          | 変更するソート済みセットアイテムの名前。 |
-| value           | String \| Bytes | この操作によってインクリメンタルされる要素の値。 |
-| amount          | Number          | スコアに加算する量。正数、負数、またはゼロが指定できます。デフォルトは1です。 |          
-| ttl             | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
+| 名前        | 型                                           | 説明                                                                                  |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------------------- |
+| cacheName | String                                      | キャッシュの名前                                                                            |
+| setName   | String                                      | 変更するソート済みセットアイテムの名前。                                                                |
+| value     | String \                                   | Bytes | この操作によってインクリメンタルされる要素の値。                                                    |
+| amount    | Number                                      | スコアに加算する量。正数、負数、またはゼロが指定できます。デフォルトは1です。                                             |
+| ttl       | [CollectionTTL object](./collection-ttl.md) | ソート済みセットアイテムのTTL（Time to Live: 生存時間）。このTTLは、キャッシュ接続クライアントを初期化する際に使用されるTTLよりも優先されます。 |
 
 <details>
   <summary>Method response object</summary>
@@ -288,23 +286,22 @@ Momento Cache におけるソート済みのセットは、値（String, Byte[],
 
 ソート済みセット内の各要素は、値とスコアの組み合わせで構成されています。
 
-例:
-`{ "TomHocusXaster" : 1138 }`
+例: `{ "TomHocusXaster" : 1138 }`
 
-| 名前            | 型                         | 説明                                   |
-| --------------- | ---------------------------- | --------------------------------------------- |
-| Value           | String \| Bytes              | ソート済みセット要素の値。                            |
-| Score           | Signed double 64-bit float   | ソート済みセット要素のスコア。 |
+| 名前    | 型                          | 説明                                 |
+| ----- | -------------------------- | ---------------------------------- |
+| Value | String \                  | Bytes              | ソート済みセット要素の値。 |
+| Score | Signed double 64-bit float | ソート済みセット要素のスコア。                    |
 
 SortedSetElement は、単独で存在することも、SortedSetElement の配列の一部として存在することもあります。
 
 ### SortedSetLength
 ソート済みセットアイテム内のエントリ数を取得します。
 
-| 名前           | 型         | 説明                                |
-|----------------| ------------ |--------------------------------------------|
-| cacheName      | String       | キャッシュの名前                         |
-| sortedSetName | String       | 確認するソート済みセットアイテムの名前。 |
+| 名前            | 型      | 説明                   |
+| ------------- | ------ | -------------------- |
+| cacheName     | String | キャッシュの名前             |
+| sortedSetName | String | 確認するソート済みセットアイテムの名前。 |
 
 <details>
   <summary>Method response object</summary>
@@ -323,12 +320,12 @@ SortedSetElement は、単独で存在することも、SortedSetElement の配�
 ### SortedSetLengthByScore
 既存のソート済みセットアイテムについて、指定された最小スコアと最大スコアの間のすべての値を検索し、その数を返します。
 
-| 名前           | 型         | 説明                                |
-|----------------| ------------ |--------------------------------------------|
-| cacheName      | String       | キャッシュの名前                         |
-| sortedSetName | String       | 確認するソート済みセットアイテムの名前。 |
-| minScore | Optional[double]   | 結果の下限のスコア（を含む）。デフォルトは -inf であり、最低のスコアまで含まれます。 |
-| maxScore | Optional[double]   | 結果の上限のスコア（を含む）。デフォルトは +inf であり、最高のスコアまで含まれます。 |
+| 名前            | 型                | 説明                                            |
+| ------------- | ---------------- | --------------------------------------------- |
+| cacheName     | String           | キャッシュの名前                                      |
+| sortedSetName | String           | 確認するソート済みセットアイテムの名前。                          |
+| minScore      | Optional[double] | 結果の下限のスコア（を含む）。デフォルトは -inf であり、最低のスコアまで含まれます。 |
+| maxScore      | Optional[double] | 結果の上限のスコア（を含む）。デフォルトは +inf であり、最高のスコアまで含まれます。 |
 
 <details>
   <summary>Method response object</summary>
