@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: Momento Topics
 sidebar_class_name: sidebar-item-overview
 title: Momento Topics とは?
-pagination_prev: null
+pagination_prev:
 description: リアルタイムなアプリケーション通信のための、最高に洗練されたサーバーレスのパブ/サブ (パブリッシュ/サブスクライブ) メッセージパターンである Momento Topics について学びましょう。
 ---
 
@@ -41,5 +41,4 @@ Momento Topics を試してみたい場合には、無料のサンドボック�
 
 <details>
   <summary>もしある項目がパブリッシュされた後にアプリがトピックをサブスクライブした場合、その項目を受け取ることはできますか？</summary>
-いいえ。サブスクライバーはトピックの過去の項目にアクセスすることはできません。
-</details>
+いいえ。サブスクライバーはトピックの過去の項目にアクセスすることはできません。 </details>

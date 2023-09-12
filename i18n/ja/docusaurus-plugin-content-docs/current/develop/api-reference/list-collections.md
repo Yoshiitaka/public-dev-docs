@@ -7,12 +7,10 @@ slug: /develop/api-reference/collections/list
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl
-import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
-# List API reference for Momento Cache
-This page details the Momento API methods for the [list collection data types](./../datatypes.md#list-collections).
+# Momento CacheのDictionary APIリファレンス
+このページでは、 [コレクションデータ型](./../datatypes.md#list-collections)のMomentoAPIメソッドについて詳しく説明します。
 
 ## List methods
 
@@ -20,11 +18,11 @@ This page details the Momento API methods for the [list collection data types](.
 
 Gets a list item from a cache, with optional slices.
 
-| Name       | Type   | Description                                                                 |
-|------------|--------|-----------------------------------------------------------------------------|
-| cacheName  | String | Name of the cache.                                                          |
-| listName   | String | The name of the list item to be retrieved.                                  |
-| startIndex | Number | The starting inclusive element of the list to fetch. Default is 0. **This argument is optional.** |
+| Name       | Type   | Description                                                                                               |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| cacheName  | String | Name of the cache.                                                                                        |
+| listName   | String | The name of the list item to be retrieved.                                                                |
+| startIndex | Number | The starting inclusive element of the list to fetch. Default is 0. **This argument is optional.**         |
 | endIndex   | Number | The ending exclusive element of the list to fetch. Default is end of list. **This argument is optional.** |
 
 <details>
@@ -52,13 +50,13 @@ Example:
 
 If you have [1, 2, 3] and listConcatenateBack [4, 5, 6] you will have [1, 2, 3, 4, 5, 6].
 
-| Name            | Type                | Description                                   |
-| --------------- | ------------------- | --------------------------------------------- |
-| cacheName       | String              | Name of the cache.                            |
-| listName        | String              | Name of the list item to be set. |
-| values          | String[] \| Bytes[] | Values to be added as elements to the list item. |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache client connection object. |
-| truncateFrontToSize | Number | See [truncate to size](#truncate-to-size). |
+| Name                | Type                                        | Description                                                                                                                     |
+| ------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| cacheName           | String                                      | Name of the cache.                                                                                                              |
+| listName            | String                                      | Name of the list item to be set.                                                                                                |
+| values              | String[] \                                 | Bytes[] | Values to be added as elements to the list item.                                                                      |
+| ttl                 | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache client connection object. |
+| truncateFrontToSize | Number                                      | See [truncate to size](#truncate-to-size).                                                                                      |
 
 <details>
   <summary>Method response object</summary>
@@ -81,13 +79,13 @@ Example:
 
 If you have [1, 2, 3] and listConcatenateFront [4, 5, 6] you will have [4, 5, 6, 1, 2, 3].
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| listName        | String       | Name of the list item to be set.              |
-| values          | String[] \| Bytes[] | Values to be added as elements to the list item. |
-| ttl          | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache client. |
-| truncateBackToSize | Number | See [truncate to size](#truncate-to-size). |
+| Name               | Type                                        | Description                                                                                                   |
+| ------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| cacheName          | String                                      | Name of the cache.                                                                                            |
+| listName           | String                                      | Name of the list item to be set.                                                                              |
+| values             | String[] \                                 | Bytes[] | Values to be added as elements to the list item.                                                    |
+| ttl                | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache client. |
+| truncateBackToSize | Number                                      | See [truncate to size](#truncate-to-size).                                                                    |
 
 <details>
   <summary>Method response object</summary>
@@ -106,10 +104,10 @@ See [response objects](./response-objects.md) for specific information.
 ### ListLength
 Get the length of an existing list item
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| listName        | String       | Name of the list item to be checked.          |
+| Name      | Type   | Description                          |
+| --------- | ------ | ------------------------------------ |
+| cacheName | String | Name of the cache.                   |
+| listName  | String | Name of the list item to be checked. |
 
 <details>
   <summary>Method response object</summary>
@@ -128,10 +126,10 @@ See [response objects](./response-objects.md) for specific information.
 ### ListPopBack
 Remove and return the last element from a list item.
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| listName        | String       | Name of the list item to be retreived.        |
+| Name      | Type   | Description                            |
+| --------- | ------ | -------------------------------------- |
+| cacheName | String | Name of the cache.                     |
+| listName  | String | Name of the list item to be retreived. |
 
 <details>
   <summary>Method response object</summary>
@@ -152,10 +150,10 @@ See [response objects](./response-objects.md) for specific information.
 ### ListPopFront
 Remove and return the first element from a list item.
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| listName        | String       | Name of the list item to be retreived.        |
+| Name      | Type   | Description                            |
+| --------- | ------ | -------------------------------------- |
+| cacheName | String | Name of the cache.                     |
+| listName  | String | Name of the list item to be retreived. |
 
 <details>
   <summary>Method response object</summary>
@@ -176,13 +174,13 @@ See [response objects](./response-objects.md) for specific information.
 ### ListPushBack
 Push a value to the end of a list item. This is exactly like passing just one value to [ListConcatenateBack](#listconcatenateback).
 
-| Name            | Type            | Description                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | Name of the cache.                            |
-| listName        | String          | Name of the list to be set.                   |
-| value           | String \| Bytes | Value to be added.              |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
-| truncateBackToSize | Number | See [truncate to size](#truncate-to-size). |
+| Name               | Type                                        | Description                                                                                                              |
+| ------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| cacheName          | String                                      | Name of the cache.                                                                                                       |
+| listName           | String                                      | Name of the list to be set.                                                                                              |
+| value              | String \                                   | Bytes | Value to be added.                                                                                               |
+| ttl                | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
+| truncateBackToSize | Number                                      | See [truncate to size](#truncate-to-size).                                                                               |
 
 <details>
   <summary>Method response object</summary>
@@ -201,13 +199,13 @@ See [response objects](./response-objects.md) for specific information.
 ### ListPushFront
 Push a value to the beginning of a list item. Just like [ListPushBack](#listpushback), but to the front.
 
-| Name            | Type            | Description                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | Name of the cache.                            |
-| listName        | String          | Name of the list to be set. |
-| value           | String \| Bytes | Value to be added to the list item by the operation. |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
-| truncateBackToSize | Number | See [truncate to size](#truncate-to-size). |
+| Name               | Type                                        | Description                                                                                                              |
+| ------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| cacheName          | String                                      | Name of the cache.                                                                                                       |
+| listName           | String                                      | Name of the list to be set.                                                                                              |
+| value              | String \                                   | Bytes | Value to be added to the list item by the operation.                                                             |
+| ttl                | [CollectionTTL object](./collection-ttl.md) | TTL for the list item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
+| truncateBackToSize | Number                                      | See [truncate to size](#truncate-to-size).                                                                               |
 
 <details>
   <summary>Method response object</summary>
@@ -230,11 +228,11 @@ Examples
 
 - If you have the list `['up', 'up', 'down', 'down', 'left', 'right']` and remove ‘up’ the list will be `['down', 'down', 'left', 'right']`
 
-| Name            | Type            | Description                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | Name of the cache.                            |
-| listName        | String          | Name of the list item to be set.              |
-| value           | String \| Bytes | Value to be added to the list item by the operation. |
+| Name      | Type      | Description                                                  |
+| --------- | --------- | ------------------------------------------------------------ |
+| cacheName | String    | Name of the cache.                                           |
+| listName  | String    | Name of the list item to be set.                             |
+| value     | String \ | Bytes | Value to be added to the list item by the operation. |
 
 <details>
   <summary>Method response object</summary>
@@ -254,11 +252,10 @@ See [response objects](./response-objects.md) for specific information.
 
 Retains only slice of the list where the start is inclusive and the end is exclusive.  The items outside of this range will be dropped from the list.
 
-Example:
-For the specified list, start at index 4 (the startIndex) and keep the next five elements, end at index 10 (the endIndex). Discard all other elements in the list. In this example, elements at position 0-3 and 9 or higher are dropped.
+Example: For the specified list, start at index 4 (the startIndex) and keep the next five elements, end at index 10 (the endIndex). Discard all other elements in the list. In this example, elements at position 0-3 and 9 or higher are dropped.
 
 | Name       | Type                                        | Description                                                                                                              |
-|------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| ---------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | cacheName  | String                                      | Name of the cache.                                                                                                       |
 | listName   | String                                      | Name of the list item to be set.                                                                                         |
 | startIndex | Number                                      | The starting inclusive element of the list to retain. Default is 0.                                                      |

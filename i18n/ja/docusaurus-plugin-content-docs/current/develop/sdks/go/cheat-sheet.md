@@ -4,16 +4,16 @@ sidebar_label: チートシート
 sidebar_class_name: sidebar-item-go
 title: Go のためのチートシート
 description: Momento Cache を Go を使ってすぐにコードを書き始めましょう
-pagination_next: null
+pagination_next:
 ---
 
 # Momento Cache を Go で使うためのチートシート
-このページでは、Momento Cache を Go で素早く使ってみたい方のために必要となる基礎的な API 呼出しを解説しています。このコードのファイル全体は[Go SDK のページをご確認下さい](https://github.com/momentohq/client-sdk-go)。
+このページでは、Momento Cache を Go で素早く使ってみたい方のために必要となる基礎的な API 呼出しを解説しています。 このコードのファイル全体は[Go SDK のページをご確認下さい](https://github.com/momentohq/client-sdk-go)。
 
 ## 必要条件
 
 * [Go をインストールする](https://go.dev/dl/)
-* Momento 認証トークンが必要。[Momento ウェブサイト](https://www.gomomento.com/)のフォーム、又は Momento CLI を使って作成可能です。
+* Momento 認証トークンが必要。 [Momento ウェブサイト](https://www.gomomento.com/)のフォーム、又は Momento CLI を使って作成可能です。
 
 ## プロジェクトを作成して、Momento クライアントライブラリをインストールする
 まだ go module を作成していなければ、お好きなディレクトリ上でまず以下のコマンドを実行します。
@@ -45,30 +45,30 @@ go get github.com/momentohq/client-sdk-go
 package main
 
 import (
-	"context"
-	"log"
-	"time"
+    "context"
+    "log"
+    "time"
 
-	"github.com/momentohq/client-sdk-go/auth"
-	"github.com/momentohq/client-sdk-go/config"
-	"github.com/momentohq/client-sdk-go/momento"
-	"github.com/momentohq/client-sdk-go/responses"
+    "github.com/momentohq/client-sdk-go/auth"
+    "github.com/momentohq/client-sdk-go/config"
+    "github.com/momentohq/client-sdk-go/momento"
+    "github.com/momentohq/client-sdk-go/responses"
 
     // We use this module to generate random keys and data later
-	"github.com/google/uuid"
+    "github.com/google/uuid"
 )
 
 func main() {
-	ctx := context.Background()
-	var credentialProvider, err = auth.NewEnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN")
-	if err != nil {
-		panic(err)
-	}
+    ctx := context.Background()
+    var credentialProvider, err = auth.NewEnvMomentoTokenProvider("MOMENTO_AUTH_TOKEN")
+    if err != nil {
+        panic(err)
+    }
 
-	const (
-		cacheName             = "my-test-cache"
-		itemDefaultTTLSeconds = 60
-	)
+    const (
+        cacheName             = "my-test-cache"
+        itemDefaultTTLSeconds = 60
+    )
 ```
 
 ## Momento Cache に新しいキャッシュを作成する
@@ -85,7 +85,7 @@ if err != nil {
 ```
 
 ## 項目をキャッシュに書き込む
-書込み操作を行うシンプルな例です。client.set 呼出しでは、TTL はオプショナルです。もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
+書込み操作を行うシンプルな例です。 client.set 呼出しでは、TTL はオプショナルです。 もし TTL を渡すと、クライアント接続オブジェクトに設定されたデフォルトの TTL 値が上書きされます。
 
 ```go
 // Sets key with default TTL and gets value with that key
@@ -125,7 +125,8 @@ case *responses.GetMiss:
 ```
 
 ## コードを実行する
-[全ファイル](https://github.com/momentohq/client-sdk-go)をコピー＆ペーストするのを忘れないでください。そうしたら、コードを実行するために以下のコマンドを実行します。
+さらなるコード例は、[Momento Go SDK レポジトリ](https://github.com/momentohq/client-sdk-go/tree/main/examples)をご確認下さい。
+:::
 
 ```cli
 go run main.go
@@ -134,5 +135,5 @@ go run main.go
 :::info
 これらの API 呼出し以上のものは、[API リファレンスページ](/develop/api-reference/index.mdx)で Momento API 呼出しの全種類の詳しい情報をご確認下さい。
 
-さらなるコード例は、[Momento Go SDK レポジトリ](https://github.com/momentohq/client-sdk-go/tree/main/examples)をご確認下さい。
+[全ファイル](https://github.com/momentohq/client-sdk-go)をコピー＆ペーストするのを忘れないでください。 そうしたら、コードを実行するために以下のコマンドを実行します。
 :::

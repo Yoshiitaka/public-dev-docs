@@ -1,7 +1,7 @@
 ---
 sidebar_position: 8
 title: Momento Ruby SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Ruby
 description: Momento Ruby SDK に関する情報です。
 ---

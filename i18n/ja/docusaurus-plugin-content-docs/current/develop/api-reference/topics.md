@@ -7,12 +7,10 @@ slug: /develop/api-reference/topics
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl
-import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
 # Momento Cache とともに Momento Topics（pub/sub）API を使用する
-Momento Topics は、分散型アプリケーションの各部分間でリアルタイム通信を可能にするメッセージングパターンです。トピックの値をパブリッシュ(プロデュース)し、トピックからサブスクライブ(コンシューム)することを可能にします。このページでは、Momento Topics で操作するための Momento API メソッドについて詳しく説明します。
+Momento Topics は、分散型アプリケーションの各部分間でリアルタイム通信を可能にするメッセージングパターンです。 トピックの値をパブリッシュ(プロデュース)し、トピックからサブスクライブ(コンシューム)することを可能にします。 このページでは、Momento Topics で操作するための Momento API メソッドについて詳しく説明します。
 
 詳細は[Momento Topics](./../../introduction/momento-topics.md)をご覧ください。
 
@@ -21,19 +19,11 @@ Momento Topics は、分散型アプリケーションの各部分間でリア�
 ### Subscribe
 このメソッドでは、ステートフルな接続を用いて新しい値を受け取るためにトピックをサブスクライブします。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | トピックが存在するキャッシュの名前     |
-| topicName       | String          | サブスクライブするトピックの名前           |
+| 名前        | 型      | 説明                |
+| --------- | ------ | ----------------- |
+| cacheName | String | トピックが存在するキャッシュの名前 |
+| topicName | String | サブスクライブするトピックの名前  |
 
-<Tabs>
-  <TabItem value="golang" label="Go" default>
-    これが <a href="https://github.com/momentohq/client-sdk-go/blob/main/examples/pubsub-example/main.go#L26">サンプルコード</a>です。
-  </TabItem>
-  <TabItem value="nodejs" label="Node.js" default>
-    Coming soon.
-  </TabItem>
-</Tabs>
 
 <details>
   <summary>メソッドのレスポンスオブジェクト</summary>
@@ -52,11 +42,11 @@ Momento Topics は、分散型アプリケーションの各部分間でリア�
 ### Publish
 メッセージをトピックにパブリッシュします。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | トピックが存在するキャッシュの名前     |
-| topicName       | String          | 値をパブリッシュするトピック名    |
-| value           | String / bytes  | 　トピックにパブリッシュする値                |
+| 名前        | 型              | 説明                |
+| --------- | -------------- | ----------------- |
+| cacheName | String         | トピックが存在するキャッシュの名前 |
+| topicName | String         | 値をパブリッシュするトピック名   |
+| value     | String / bytes | トピックにパブリッシュする値    |
 
 <Tabs>
   <TabItem value="golang" label="Go" default>

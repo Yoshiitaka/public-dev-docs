@@ -71,10 +71,8 @@ Most caches were built for a pre-cloud world and thus require you to pre-provisi
 
 In contrast, Momento is designed for the elasticity of the modern cloud. You don't need to pre-provision your cache size -- your Momento cache automatically expands and contracts based on the operations you perform against it. In the normal course of operations, Momento will not evict items based on a lack of available memory.
 
-That being said, you should still use TTL on items in your Momento cache to avoid cache staleness and to reduce costs. Let's see how to use TTL with Momento's SimpleCache.
-</details>
+That being said, you should still use TTL on items in your Momento cache to avoid cache staleness and to reduce costs. Let's see how to use TTL with Momento's SimpleCache. </details>
 
 <details>
   <summary>What's the maximum TTL I can set?</summary>
-By default, the limit you can set the TTL for an item is 24 hours. If you need to have data in the cache beyond that time, please <a href="mailto:support@momentohq.com">contact Momento Support</a>.
-</details>
+By default, the limit you can set the TTL for an item is 24 hours. If you need to have data in the cache beyond that time, please <a href="mailto:support@momentohq.com">contact Momento Support</a>. </details>

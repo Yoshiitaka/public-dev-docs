@@ -2,7 +2,7 @@
 sidebar_position: 1
 sidebar_label: サーバーレスキャッシュとは?
 title: サーバーレスキャッシュとは?
-pagination_prev: null
+pagination_prev:
 description: キャッシュの文脈でサーバーレスとはどういうことか、そして Momento Cache がいかに簡潔で高速なキャッシュになるかを学びましょう。
 ---
 

@@ -19,10 +19,10 @@ Our goal for all of the Momento SDKs is to make sure that developers can direct 
 
 There are many different logging libraries available for node.js. Some popular ones include:
 
-- [Pino](https://github.com/pinojs/pino)
-- [Winston](https://github.com/winstonjs/winston)
-- [Bunyan](https://github.com/trentm/node-bunyan)
-- [Morgan](https://github.com/expressjs/morgan)
+-   [Pino](https://github.com/pinojs/pino)
+-   [Winston](https://github.com/winstonjs/winston)
+-   [Bunyan](https://github.com/trentm/node-bunyan)
+-   [Morgan](https://github.com/expressjs/morgan)
 
 To ensure that Momento is compatible with all of these libraries (and more!), we provide a light-weight logging facade that you can use to wrap your favorite logging client. To use it, you simply need to implement the `MomentoLoggerFactory` and `MomentoLogger` interfaces:
 
@@ -42,6 +42,7 @@ Then you should see log messages from Momento coming through your pino logging e
 ```
 
 ## Metrics
+
 Metrics are measurements that provide quantitative information about system performance and behavior. They are numerical values captured and recorded over regular intervals, providing statistical data to aid in understanding the trends and patterns in a system.
 
 For Momento specifically, you might desire to capture metrics on the number of requests made, their duration, request or response size, or failure rates. Capture these in the Node.js SDK using a middleware, which intercepts the Momento gRPC calls and responses. Here is an example that uses OpenTelemetry and Prometheus to capture request count faceted by request type:
@@ -62,6 +63,7 @@ Here is an example of the Grafana UI displaying a graph of get and set requests 
 ![image](./images/grafana_screenshot.png)
 
 ## Traces
+
 Traces provide a detailed timeline of processes within an application, showing the relationship between different components and services involved in a specific request or operation. They allow developers to analyze the sequence and duration of these operations, facilitating a better understanding of how data flows through the system.
 
 The Momento Node.js SDK uses gRPC internally to communicate with the Momento servers. OpenTelemetry provides a capability for auto-instrumenting all gRPC calls with traces. You don't need to add any middleware code to produce these traces, like you do for the metrics. Here is an example that automatically generates traces for these calls and exports them to Zipkin:
@@ -79,4 +81,5 @@ If the performance of your application is impacted by trace generation, you shou
 export OTEL_TRACES_SAMPLER="traceidratio"
 export OTEL_TRACES_SAMPLER_ARG="0.1"
 ```
+
 Setting these will ensure that only 10% of traces are created.

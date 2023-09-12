@@ -1,15 +1,13 @@
 ---
 sidebar_position: 2
 title: Momento JavaScript web SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: JS Web SDK
 description: Momento web SDK に関する情報です。
 ---
 
 import { SdkExampleCodeBlock } from "@site/src/components/SdkExampleCodeBlock";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleCodeBlock to SdkExampleCodeBlockImpl
-import { SdkExampleCodeBlockImpl } from "@site/src/components/SdkExampleCodeBlockImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleCodeBlock to SdkExampleCodeBlockImpl import { SdkExampleCodeBlockImpl } from "@site/src/components/SdkExampleCodeBlockImpl";
 
 # Momento web SDK for JavaScript をブラウザ上で
 
@@ -30,8 +28,7 @@ Momento web SDK は [`@gomomento/sdk-web`](https://www.npmjs.com/package/@gomome
 ## リソース
 
 - [Momento Node.js チートシート](/develop/sdks/nodejs/cheat-sheet.mdx): このチートシートは Node.js SDK をターゲットにしていますが、web SDK API は完全に互換性があります。
-- [チャットアプリの例](https://github.com/momentohq/example-chat-app): web SDK を使って作られた完全機能のチャットアプリケーションです！
-  ![チャットスクリーンショット](/img/web-sdk-chat-app.png)
+- [チャットアプリの例](https://github.com/momentohq/example-chat-app): web SDK を使って作られた完全機能のチャットアプリケーションです！ ![チャットスクリーンショット](/img/web-sdk-chat-app.png)
 - [Web SDK の例](https://github.com/momentohq/client-sdk-javascript/blob/main/examples/web/README.md): web SDK をどの様に使うかを示した動作可能なプロジェクトの例です。
 - まもなく: コードを本番環境に持っていく: web SDK での設定とエラーハンドリング
 
@@ -67,5 +64,4 @@ API 呼出しは [Momento Node.js SDK と同一](/develop/sdks/nodejs/cheat-shee
 
 <details>
   <summary>ブラウザからのトラフィックは暗号化されていますか？</summary>
-Momento サービスの全てのトラフィックと同様に、web SDK は経路上は全て暗号化されています。加えると、SDK は TLS 1.2+ 暗号化を利用しています。
-</details>
+Momento サービスの全てのトラフィックと同様に、web SDK は経路上は全て暗号化されています。加えると、SDK は TLS 1.2+ 暗号化を利用しています。 </details>

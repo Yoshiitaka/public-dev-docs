@@ -1,7 +1,7 @@
 ---
 sidebar_position: 7
 title: Momento PHP SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: PHP
 description: Momento PHP SDK に関する情報です。
 ---

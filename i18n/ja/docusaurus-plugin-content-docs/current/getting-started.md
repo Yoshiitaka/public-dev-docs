@@ -3,8 +3,8 @@ sidebar_position: 3
 sidebar_label: はじめてみる
 sidebar_class_name: sidebar-item-getting-started
 title: はじめてみる
-pagination_prev: null
-pagination_next: null
+pagination_prev:
+pagination_next:
 description: SDK を選んで、Momento Cache と Momento Topics をすぐに使い始めてみましょう。
 ---
 
@@ -29,8 +29,7 @@ import TabItem from '@theme/TabItem';
 
 ![image of console menu](/img/getting-started/auth-token.gif)
 
-Token ページ上で、1. クラウドプロバイダーを選択し、2. ドロップダウンリストから利用可能なリージョンを選び、3. トークンの有効期限を設定し、そして 4. "トークンを生成する"
-ボタンをクリックします。
+Token ページ上で、1. クラウドプロバイダーを選択し、2. ドロップダウンリストから利用可能なリージョンを選び、3. トークンの有効期限を設定し、そして 4. "トークンを生成する" ボタンをクリックします。
 
 ![image](/img/getting-started/select-provider-region.png)
 
@@ -40,8 +39,7 @@ Token ページ上で、1. クラウドプロバイダーを選択し、2. ド�
 
 ## ステップ 3: 認証トークンを保存する
 
-Momento の認証に使うために、この認証トークンを保存できる場所がいつくかあります。今回の単純な例では、認証トークンを環境変数に保存しますが、AWS Secrets Manager や GCP
-Secret Manager の様なところに認証トークンを保存するのがベストプラクティスです。
+Momento の認証に使うために、この認証トークンを保存できる場所がいつくかあります。今回の単純な例では、認証トークンを環境変数に保存しますが、AWS Secrets Manager や GCP Secret Manager の様なところに認証トークンを保存するのがベストプラクティスです。
 
 ## ステップ 4: SDK を入れて、キャッシュを作成し、データを読み書きする
 
@@ -213,8 +211,7 @@ Momento Topics も試してみたいですか？このデモでは、一方の�
 
 ## Momento CLIのインストール
 
-CLIをローカル(Linux, Windows, Mac)にインストールすることも可能です。[こちらのリポ](https://github.com/momentohq/momento-cli)
-より最新のCLIやインストール方法また使用方法などを確認できます。
+CLIをローカル(Linux, Windows, Mac)にインストールすることも可能です。[こちらのリポ](https://github.com/momentohq/momento-cli) より最新のCLIやインストール方法また使用方法などを確認できます。
 
 ## Momento SDK 一覧
 
@@ -234,5 +231,4 @@ CLIをローカル(Linux, Windows, Mac)にインストールすることも可�
 
 <details>
   <summary>Momento は私のクラウドアカウントに何かしらのリソースをデプロイしますか？</summary>
-いいえ、しません。Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスであり、皆さんのアプリケーションコードから呼び出して使います。
-</details>
+いいえ、しません。Momento Cache はフルマネージドで、API ベースの、サーバーレスサービスであり、皆さんのアプリケーションコードから呼び出して使います。 </details>

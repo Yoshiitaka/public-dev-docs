@@ -3,7 +3,7 @@ sidebar_position: 6
 title: API レファレンス情報
 pagination_prev: null
 sidebar_label: API リファレンス
-説明: 知っておくべきAPIコールを学んで、Momento Cacheと共に使ってみよう。
+description: 知っておくべきAPIコールを学んで、Momento Cacheと共に使ってみよう。
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
@@ -23,9 +23,9 @@ import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
 属性:
 
-| 名前      | 型   | 説明                      |
-| --------- | ------ | -------------------------------- |
-| cacheName | String | 作成するcacheの名前。|
+| 名前        | 型      | 説明                      |
+| --------- | ------ | ----------------------- |
+| cacheName | String | 作成するcacheの名前。           |
 
 <SdkExampleTabs snippetId={'API_CreateCache'} />
 
@@ -35,9 +35,9 @@ cacheを削除します。
 
 属性:
 
-| 名前      | 型   | 説明                      |
-| --------- | ------ | -------------------------------- |
-| cacheName | String | 削除するcacheの名前。 |
+| 名前        | 型      | 説明                      |
+| --------- | ------ | ----------------------- |
+| cacheName | String | 削除するcacheの名前。           |
 
 <SdkExampleTabs snippetId={'API_DeleteCache'} />
 
@@ -45,9 +45,9 @@ cacheを削除します。
 
 すべてのcacheのリストを返します。
 
-| 名前      | 型   | 説明                     |
-| --------- | ------ | ------------------------------- |
-| nextToken | String | cacheのページネーション用の トークンです。|
+| 名前        | 型      | 説明                       |
+| --------- | ------ | ------------------------ |
+| nextToken | String | cacheのページネーション用の トークンです。 |
 
 <SdkExampleTabs snippetId={'API_ListCaches'} />
 
@@ -57,13 +57,13 @@ cacheの全データをフラッシュします。
 
 属性:
 
-| 名前      | 型   | 説明                      |
-| --------- | ------ | -------------------------------- |
-| cacheName | String | フラッシュするcacheの名前。 |
+| 名前        | 型      | 説明                      |
+| --------- | ------ | ----------------------- |
+| cacheName | String | フラッシュするcacheの名前。        |
 
 <SdkExampleTabs snippetId={'API_FlushCache'} />
 
-:::ヒント
+:::tip
 
 [Delete Cache](#delete-cache)、[Create Cache](#create-cache)の順に使用することでこのプロセスを模倣できますが、FlushCache APIはcacheの設定を保持したまま、データのみを削除します。
 
@@ -75,14 +75,14 @@ cacheの全データをフラッシュします。
 
 ### Set
 
-指定された生存時間(TTL)秒の値をcacheに設定します。このkeyの値がすでに存在する場合は、新しい値で置き換えられます。
+Sets the value in cache with a given Time To Live (TTL) seconds. If a value for this key is already present it will be replaced by the new value.
 
-| 名前       | 型   | 説明                                   |
-| ---------- | ------ | --------------------------------------------- |
-| cacheName  | String | cacheの名前。                            |
-| key        | []Byte | 値を追加するkey。 |
-| value      | []Byte | 格納される値。                      |
-| ttlSeconds | int    | cache内のアイテムのTTL。           |
+| 名前         | 型       | 説明                                   |
+| ---------- | ------- | ------------------------------------ |
+| cacheName  | String  | cacheの名前。                            |
+| key        | \[]Byte | 値を追加するkey。                           |
+| value      | \[]Byte | 格納される値。                              |
+| ttlSeconds | int     | cache内のアイテムのTTL。                     |
 
 <SdkExampleTabs snippetId={'API_Set'} />
 
@@ -90,10 +90,10 @@ cacheの全データをフラッシュします。
 
 指定されたkeyに対して格納されているcache値を取得します。
 
-| 名前      | 型   | 説明                                   |
-| --------- | ------ | --------------------------------------------- |
-| cacheName | String | cacheの名前。                          |
-| key       | []Byte | 値を取得するために指定するkeyです。|
+| 名前        | 型       | 説明                                   |
+| --------- | ------- | ------------------------------------ |
+| cacheName | String  | cacheの名前。                            |
+| key       | \[]Byte | 値を取得するために指定するkeyです。                  |
 
 <SdkExampleTabs snippetId={'API_Get'} />
 
@@ -101,41 +101,44 @@ cacheの全データをフラッシュします。
 
 与えられたkeyに対して格納されているcache値を削除します。
 
-| 名前      | 型   | 説明                                     |
-| --------- | ------ | ----------------------------------------------- |
-| cacheName | String | cacheの名前。                          |
-| key       | []Byte | 値を削除するために指定するkey。 |
+| 名前        | 型       | 説明                                     |
+| --------- | ------- | -------------------------------------- |
+| cacheName | String  | cacheの名前。                              |
+| key       | \[]Byte | 値を削除するために指定するkey。                      |
 
 <SdkExampleTabs snippetId={'API_Delete'} />
 
 ### Increment
 
-既存の値がベース10(10進法)の整数を表すUTF-8文字列である場合に限り、フィールドの値を追加 します。もしフィールドが存在しない場合、このメソッドはフィールドの値をインクリメントして設定しま す。
+既存の値がベース10(10進法)の整数を表すUTF-8文字列である場合に限り、フィールドの値を追加 します。もしフィールドが存在しない場合、このメソッドはフィールドの値をインクリメントして設定しま す。 If the item does not exist, this method sets the item's value to the amount to increment by.
 
-| 名前      | 型   | 説明                                     |
-| --------- | ------ | ----------------------------------------------- |
-| cacheName | String | cacheの名前。                             |
-| field       | String | 値のインクリメントする場合の対象となるkey。 |
-| amount       | Integer | 値に加算する量です。正の値、負の値、またはゼロを指定します。デフォルトは1。 |
+| 名前        | 型       | 説明                                                                                   |
+| --------- | ------- | ------------------------------------------------------------------------------------ |
+| cacheName | String  | cacheの名前。                                                                            |
+| key       | String  | 値のインクリメントする場合の対象となるkey。                                                              |
+| amount    | Integer | The quantity to add to the value. May be positive, negative, or zero. Defaults to 1. |
 
-:::注記
+:::note
 
-インクリメントされた値は、-9223372036854775808から9223372036854775807の間、つまり64ビッ ト符号付き整数配列でなければなりません。そうでない場合は、エラーが返されます。
+The resulting incremented value must be between -9223372036854775808 and 9223372036854775807, ie. a signed 64-bit integer. If not, there will be an error response.
 
 :::
 
 <SdkExampleTabs snippetId={'API_Increment'} />
 
 ### Ping
-サーバにpingを送信します。このAPIは、クライアントがサーバに正常に接続できることを確認するた めの接続性のチェックに使用できます。
+
+Sends a ping to the server. サーバにpingを送信します。このAPIは、クライアントがサーバに正常に接続できることを確認するた めの接続性のチェックに使用できます。
 
 <details>
     <summary>メソッドのレスポンスオブジェクト</summary>
 
-    * Success
-    * Error
+```
+* Success
+* Error
 
-    具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+```
 
 </details>
 
@@ -143,21 +146,26 @@ cacheの全データをフラッシュします。
 
 ### ItemGetType
 
-与えられたkeyに対して、対応するアイテムが存在する場合、その型(SCALAR、DICTIONARY、LISTな ど)を返します。
+与えられたkeyに対して、対応するアイテムが存在する場合、その型(SCALAR、DICTIONARY、LISTな ど)を返します。 of the corresponding item, if it exists.
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | cacheの名前。                           |
-| key        | String \| Byte          | itemの型が返却されるべきkey。            |
+| 名前              | 型                      | 説明                                   |
+| --------------- | ---------------------- | ------------------------------------ |
+| cacheName       | String                 | cacheの名前。                            |
+| key             | String | Byte          | itemの型が返却されるべきkey。                   |
 
 <details>
   <summary>メソッドのレスポンスオブジェクト</summary>
 
-  * Cache hit
-  - `型()`: enum: SCALAR, DICTIONARY, SET, LIST, SORTED_SET
+-   Cache hit
 
-  * Cache miss
-  * Cache error
+<!---->
+
+-   `型()`: enum: SCALAR, DICTIONARY, SET, LIST, SORTED_SET
+
+<!---->
+
+-   Cache miss
+-   Cache error
 
   具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
 
@@ -169,19 +177,21 @@ cacheの全データをフラッシュします。
 
 指定されたkeyがcacheに存在するかどうかをチェックします。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | cacheの名前。                            |
-| key        | String \| Byte          | cacheに存在するかどうかをチェックするkey。             |
+| 名前              | 型                      | 説明                                     |
+| --------------- | ---------------------- | -------------------------------------- |
+| cacheName       | String                 | cacheの名前。                              |
+| key             | String | Byte          | cacheに存在するかどうかをチェックするkey。              |
 
 <details>
     <summary>メソッドのレスポンスオブジェクト</summary>
 
-    * Success
-    - `exists()`: Bool
-    * Error
+```
+* Success
+- `exists()`: Bool
+* Error
 
-    具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+```
 
 </details>
 
@@ -191,19 +201,21 @@ cacheの全データをフラッシュします。
 
 指定されたkey(複数)がcacheに存在するかどうかをチェックします。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | cacheの名前。                          |
-| keys        | String[] \| Byte[]          | cacheに存在するかどうかをチェックするkey(複数)。              |
+| 名前              | 型                            | 説明                                         |
+| --------------- | ---------------------------- | ------------------------------------------ |
+| cacheName       | String                       | cacheの名前。                                  |
+| keys            | String\[] | Byte\[]          | cacheに存在するかどうかをチェックするkey(複数)。              |
 
 <details>
     <summary>メソッドのレスポンスオブジェクト</summary>
 
-    * Success
-    - `exists()`: Bool[]
-    * Error
+```
+* Success
+- `exists()`: Bool[]
+* Error
 
-    具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+```
 
 </details>
 
@@ -213,21 +225,23 @@ cacheの全データをフラッシュします。
 
 指定された値を、指定されたkeyを持つcacheのアイテムに関連付けます。
 
-| 名前       | 型   | 説明                                   |
-| ---------- | ------ | --------------------------------------------- |
-| cacheName  | String | cacheの名前。                           |
-| key        | String \| Bytes | 設定されるkey。 |
-| value      | String \| Bytes | 格納される値。                      |
-| ttlSeconds | Duration    | cacheにあるアイテムの生存時間 (TTL)。          |
+| 名前         | 型              | 説明                                   |
+| ---------- | -------------- | ------------------------------------ |
+| cacheName  | String         | cacheの名前。                            |
+| key        | String | Bytes | 設定されるkey。                            |
+| value      | String | Bytes | 格納される値。                              |
+| ttlSeconds | Duration       | cacheにあるアイテムの生存時間 (TTL)。             |
 
 <details>
     <summary>メソッドのレスポンスオブジェクト</summary>
 
-    * Stored
-    * NotStored
-    * Error
+```
+* Stored
+* NotStored
+* Error
 
-    具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
+```
 
 </details>
 
@@ -241,11 +255,11 @@ cacheの全データをフラッシュします。
 
 cacheアイテムのTTLを、指定された値(秒)で上書きします。
 
-| 名前      | 型   | 説明                                     |
-| --------- | ------ | ----------------------------------------------- |
-| cacheName | String | cacheの名前。                             |
-| key       | String \| Bytes | 値のTTLを上書きする対象のkey。 |
-| ttl       | Duration | cacheで上書きしたいTTLを秒単位で指定します。 |
+| 名前        | 型              | 説明                                                        |
+| --------- | -------------- | --------------------------------------------------------- |
+| cacheName | String         | cacheの名前。                                                 |
+| key       | String | Bytes | 値のTTLを上書きする対象のkey。                                        |
+| ttl       | Duration       | Time to live that you want to update in cache in seconds. |
 
 <SdkExampleTabs snippetId={'API_UpdateTtl'} />
 
@@ -254,13 +268,20 @@ cacheアイテムのTTLを、指定された値(秒)で上書きします。
 TTLを増加させる場合のみ、keyのTTL秒数を指定された値に増やします。
 
 例
-- TTLが5秒で、6秒を指定した場合、新しいTTLは6秒になります。
-- TTLが5秒で、3秒を指定した場合、TTLは増加しません。
-| 名前      | 型   | 説明                                     |
-| --------- | ------ | ----------------------------------------------- |
-| cacheName | String | cacheの名前。                           |                              |
-| key       | String \| Bytes | 値のTTLを増加させるkeyの指定。 |
-| ttl       | Duration | 増加したいTTLを秒単位で指定します。 |
+
+-   TTLが5秒で、6秒を指定した場合、新しいTTLは6秒になります。
+-   TTLが5秒で、3秒を指定した場合、TTLは増加しません。
+    | 名前      | 型   | 説明                                     |
+    | --------- | ------ | ----------------------------------------------- |
+    | cacheName | String | cacheの名前。                           |                              |
+    | key       | String | Bytes | 値のTTLを増加させるkeyの指定。 |
+    | ttl       | Duration | 増加したいTTLを秒単位で指定します。 |
+
+| 名前        | 型              | 説明                                                              |
+| --------- | -------------- | --------------------------------------------------------------- |
+| cacheName | String         | cacheの名前。                                                       |
+| key       | String | Bytes | 指定された生存時間(TTL)秒の値をcacheに設定します。このkeyの値がすでに存在する場合は、新しい値で置き換えられます。 |
+| ttl       | Duration       | Time to live that you want to increase to.                      |
 
 <SdkExampleTabs snippetId={'API_IncreaseTtl'} />
 
@@ -269,14 +290,15 @@ TTLを増加させる場合のみ、keyのTTL秒数を指定された値に増�
 TTLを減少させる場合のみ、keyのTTL秒数を指定された値に減らします。
 
 例
-- TTLが5秒で、3秒を指定した場合、新しいTTLは3秒になります。
-- TTLが5秒で、6秒を指定した場合、TTLは減少しません。
 
-| 名前      | 型   | 説明                                     |
-| --------- | ------ | ----------------------------------------------- |
-| cacheName | String | cacheの名前。                             |
-| key       | String \| Bytes | 値のTTLを減少させるkeyの指定。 |
-| ttl       | Duration | 減少させたいTTLを秒単位で指定します。 |
+-   TTLが5秒で、3秒を指定した場合、新しいTTLは3秒になります。
+-   TTLが5秒で、6秒を指定した場合、TTLは減少しません。
+
+| 名前        | 型              | 説明                                         |
+| --------- | -------------- | ------------------------------------------ |
+| cacheName | String         | cacheの名前。                                  |
+| key       | String | Bytes | 値のTTLを減少させるkeyの指定。                         |
+| ttl       | Duration       | Time to live that you want to decrease to. |
 
 <SdkExampleTabs snippetId={'API_DecreaseTtl'} />
 
@@ -284,19 +306,24 @@ TTLを減少させる場合のみ、keyのTTL秒数を指定された値に減�
 
 与えられたkeyに対して、そのアイテムがcacheから失効するまでの生存時間(TTL)を返します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | cacheの名前。                          |
-| key        | String \| Byte          | アイテムの型を返すkeyの指定。              |
+| 名前              | 型                      | 説明                                                    |
+| --------------- | ---------------------- | ----------------------------------------------------- |
+| cacheName       | String                 | cacheで上書きしたいTTLを秒単位で指定します。                            |
+| key             | String | Byte          | アイテムの型を返すkeyの指定。                                      |
 
 <details>
   <summary>メソッドのレスポンスオブジェクト</summary>
 
-  * Cache hit
-  - `remainingTtl()`: Duration
+-   Cache hit
 
-  * Cache miss
-  * Cache error
+<!---->
+
+-   `remainingTtl()`: Duration
+
+<!---->
+
+-   Cache miss
+-   Cache error
 
   具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
 
@@ -312,19 +339,25 @@ TTLを減少させる場合のみ、keyのTTL秒数を指定された値に減�
 
 指定した権限と有効期限を持つ新しいMomento認証トークンを生成します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| scope           | TokenScope      | 新しいトークンに付与する権限です。あらかじめ構築されたTokenScope オブジェクトは、SDKによって提供されます。 |
-| expiresIn       | ExpiresIn       | トークンが期限切れになるまでの秒数、または`never`の指定。              |
+| 名前              | 型               | 説明                                                                                                       |
+| --------------- | --------------- | -------------------------------------------------------------------------------------------------------- |
+| scope           | TokenScope      | The permissions to grant to the new token.  新しいトークンに付与する権限です。あらかじめ構築されたTokenScope オブジェクトは、SDKによって提供されます。 |
+| expiresIn       | ExpiresIn       | トークンが期限切れになるまでの秒数、または`never`の指定。                                                                         |
 
 <details>
   <summary>メソッドのレスポンスオブジェクト</summary>
 
-  * Success
-  - `authToken`: string - the new auth token
-  - `refreshToken`: string - a refresh token that can be used with the `RefreshAuthToken` API to refresh the token before it expires
-  - `expiresAt`: Timestamp - the timestamp at which the token will expire
-  * Error
+-   Success
+
+<!---->
+
+-   `authToken`: string - the new auth token
+-   `refreshToken`: string - a refresh token that can be used with the `RefreshAuthToken` API to refresh the token before it expires
+-   `expiresAt`: Timestamp - the timestamp at which the token will expire
+
+<!---->
+
+-   Error
 
   具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
 
@@ -334,20 +367,26 @@ TTLを減少させる場合のみ、keyのTTL秒数を指定された値に減�
 
 ### RefreshAuthToken
 
-既存の有効期限内のMomento認証トークンを更新します。元のトークンと同じ権限と有効期限を持つ 新しいトークンを生成します。
+Refreshes an existing, unexpired Momento auth token.  既存の有効期限内のMomento認証トークンを更新します。元のトークンと同じ権限と有効期限を持つ 新しいトークンを生成します。
 
-| 名前            | 型            | 説明                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| refreshToken    | String          | 最初の`GenerateAuthToken`の呼び出しから取得した、現在の認証トー クンのrefreshTokenを指定。 |
+| field            | コレクション型は、ユースケースに応じて、さまざまなタイプの構造を含むことができます。サポートされ ているデータ型は以下の通りです:            | 減少させたいTTLを秒単位で指定します。                                          |
+| ---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| refreshToken     | String                                                                       | 最初の`GenerateAuthToken`の呼び出しから取得した、現在の認証トー クンのrefreshTokenを指定。 |
 
 <details>
   <summary>メソッドのレスポンスオブジェクト</summary>
 
-  * Success
-  - `authToken`: string - the new auth token
-  - `refreshToken`: string - a refresh token that can be used with the `RefreshAuthToken` API to refresh the token before it expires
-  - `expiresAt`: Timestamp - the timestamp at which the token will expire
-  * Error
+-   Success
+
+<!---->
+
+-   `authToken`: string - the new auth token
+-   `refreshToken`: string - a refresh token that can be used with the `RefreshAuthToken` API to refresh the token before it expires
+-   `expiresAt`: Timestamp - the timestamp at which the token will expire
+
+<!---->
+
+-   Error
 
   具体的な情報については、[レスポンスオブジェクト](./response-objects.md)を参照してください。
 
@@ -357,16 +396,15 @@ TTLを減少させる場合のみ、keyのTTL秒数を指定された値に減�
 
 ### コレクションデータ型
 
-コレクション型は、ユースケースに応じて、さまざまなタイプの構造を含むことができます。サポートされ ているデータ型は以下の通りです:
+Collections may contain different types of structures depending on your use case. Supported data types are:
 
-* [Dictionaries(辞書型)](./dictionary-collections.md)は、順序のないフィールドと値のペアを格納するために使用されます。
-* [Lists(リスト型)](./list-collections.md)は、順序付けられた要素のコレクションで、各要素が挿入された順序でソートされています。
-* [Sets(セット型)](./set-collections.md)は、ユニークな要素の文字列による、順序のないコレクションです。
-* [Sorted Sets(ソート済みセット型) ](./sorted-set-collections.md)は、ユニークな要素の順序付きコレクションです。各要素 は、値:スコアのペアを含んでいます。
+-   [Dictionaries(辞書型)](./dictionary-collections.md)は、順序のないフィールドと値のペアを格納するために使用されます。
+-   [Lists(リスト型)](./list-collections.md)は、順序付けられた要素のコレクションで、各要素が挿入された順序でソートされています。
+-   [Sets(セット型)](./set-collections.md)は、ユニークな要素の文字列による、順序のないコレクションです。
+-   [Sorted Sets(ソート済みセット型) ](./sorted-set-collections.md)は、ユニークな要素の順序付きコレクションです。各要素 は、値:スコアのペアを含んでいます。  Each element contains a value:score pair.
 
 利用方法についての詳しい情報は、[コレクションデータ型](./../datatypes.md)をご覧ください。
 
 ## 現在のSDKのAPI対応状況について
-
 
 各SDKの言語におけるAPIサポートの状況については、[言語サポートページ](./language-support.md)をご覧ください。

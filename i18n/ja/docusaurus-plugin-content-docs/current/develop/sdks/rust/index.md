@@ -1,7 +1,7 @@
 ---
 sidebar_position: 9
 title: Momento Rust SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Rust
 description: Momento Rust SDK に関する情報です。
 ---

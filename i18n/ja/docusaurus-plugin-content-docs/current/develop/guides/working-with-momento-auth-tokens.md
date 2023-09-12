@@ -3,13 +3,10 @@ sidebar_position: 4
 sidebar_label: Momento Authentication
 title: Working with Momento auth tokens
 description: Learn how to use expiring tokens to enhance the security of your application
-pagination_next: null
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl
-import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
 # Working with Momento auth tokens
 
@@ -71,6 +68,6 @@ While a Lambda function, Google Cloud Function, or another automated script refr
 Momento auth tokens have an associated `TokenScope` which controls their level of access to Momento resources. Here is a list of the available `TokenScope`s:
 
 - `SuperUser`: these tokens have full access to all control plane and data plane operations. They can also be used to generate new tokens via the [`generateAuthToken`](/develop/api-reference#generateauthtoken) API. The only way to create a `SuperUser` token is through the [Momento web console](https://console.gomomento.com).
-- `AllDataReadWrite`: these tokens have full read/write access to all data plane operations, but no access to control plane operations. They can be used to read/write any cache, and to publish and subscribe to any topic. They cannot be used to create or delete caches, nor to generate new Momento auth tokens. `AllDataReadWrite` tokens are created via the [`generateAuthToken`](/develop/api-reference#generateauthtoken) API. 
+- `AllDataReadWrite`: these tokens have full read/write access to all data plane operations, but no access to control plane operations. They can be used to read/write any cache, and to publish and subscribe to any topic. They cannot be used to create or delete caches, nor to generate new Momento auth tokens. `AllDataReadWrite` tokens are created via the [`generateAuthToken`](/develop/api-reference#generateauthtoken) API.
 
 Got more questions or feedback for us? Join our [Discord community](https://discord.gg/GDStRczm) or reach out to [Momento support](mailto:support@momentohq.com) for help.

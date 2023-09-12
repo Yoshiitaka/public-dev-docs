@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Momento Node.js SDK
-pagination_prev: null
+pagination_prev:
 sidebar_label: Node.js
 description: Momento Node.js SDK に関する情報です。
 ---

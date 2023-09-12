@@ -7,9 +7,7 @@ slug: /develop/api-reference/collections/sets
 ---
 
 import { SdkExampleTabs } from "@site/src/components/SdkExampleTabs";
-// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet
-// plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl
-import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
+// This import is necessary even though it looks like it's un-used; The inject-example-code-snippet // plugin will transform instances of SdkExampleTabs to SdkExampleTabsImpl import { SdkExampleTabsImpl } from "@site/src/components/SdkExampleTabsImpl";
 
 # Set API reference for Momento Cache
 
@@ -24,12 +22,12 @@ See [Sets](./../datatypes.md#set-collections) for more information on their usag
 ### SetAddElement
 Adds an element to a set. If the set item does not already exist, this method will create one.
 
-| Name            | Type            | Description                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | Name of the cache.                            |
-| setName         | String          | Name of the set item to be altered. |
-| element         | String \| Bytes | Element to be added by this operation. |
-| ttl             | [CollectionTTL object](./collection-ttl.md) | TTL for the set item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
+| Name      | Type                                        | Description                                                                                                             |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| cacheName | String                                      | Name of the cache.                                                                                                      |
+| setName   | String                                      | Name of the set item to be altered.                                                                                     |
+| element   | String \                                   | Bytes | Element to be added by this operation.                                                                          |
+| ttl       | [CollectionTTL object](./collection-ttl.md) | TTL for the set item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
 
 <details>
   <summary>Method response object</summary>
@@ -44,14 +42,14 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetAddElement'} />
 
 ### SetAddElements
-Adds multiple elements to a set item.
+Adds multiple elements to a set item. If the set item does not already exist, this method will create one.
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| setName         | String       | Name of the set item to be altered. |
-| elements        | String[] \| Bytes[] | Elements to be added by this operation. |
-| ttl          | [CollectionTTL object](./collection-ttl.md) | TTL for the set item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
+| Name      | Type                                        | Description                                                                                                             |
+| --------- | ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| cacheName | String                                      | Name of the cache.                                                                                                      |
+| setName   | String                                      | Name of the set item to be altered.                                                                                     |
+| elements  | String[] \                                 | Bytes[] | Elements to be added by this operation.                                                                       |
+| ttl       | [CollectionTTL object](./collection-ttl.md) | TTL for the set item in cache. This TTL takes precedence over the TTL used when initializing a cache connection client. |
 
 <details>
   <summary>Method response object</summary>
@@ -69,10 +67,10 @@ See [response objects](./response-objects.md) for specific information.
 
 Gets a set item from a cache.
 
-| Name            | Type   | Description                                   |
-| --------------- | ------ | --------------------------------------------- |
-| cacheName       | String | Name of the cache.                            |
-| setName         | String | The name of the set item to be retreived.     |
+| Name      | Type   | Description                               |
+| --------- | ------ | ----------------------------------------- |
+| cacheName | String | Name of the cache.                        |
+| setName   | String | The name of the set item to be retreived. |
 
 <details>
   <summary>Method response object</summary>
@@ -93,13 +91,13 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetFetch'} />
 
 ### SetRemoveElement
-Removes a single element from an existing set item.
+Removes a single element from an existing set item. If the set is emptied as a result, the item is deleted.
 
-| Name            | Type            | Description                                   |
-| --------------- | --------------- | --------------------------------------------- |
-| cacheName       | String          | Name of the cache.                            |
-| setName         | String          | Name of the set item to be altered.           |
-| element         | String \| Bytes | Element to be removed by this operation.   |
+| Name      | Type      | Description                                      |
+| --------- | --------- | ------------------------------------------------ |
+| cacheName | String    | Name of the cache.                               |
+| setName   | String    | Name of the set item to be altered.              |
+| element   | String \ | Bytes | Element to be removed by this operation. |
 
 <details>
   <summary>Method response object</summary>
@@ -114,13 +112,13 @@ See [response objects](./response-objects.md) for specific information.
 <SdkExampleTabs snippetId={'API_SetRemoveElement'} />
 
 ### SetRemoveElements
-Removes multiple elements from an existing set item.
+Removes multiple elements from an existing set item. If the set is emptied as a result, the item is deleted.
 
-| Name            | Type         | Description                                   |
-| --------------- | ------------ | --------------------------------------------- |
-| cacheName       | String       | Name of the cache.                            |
-| setName         | String       | Name of the set item to be altered. |
-| elements         | String[] \| Bytes[] | Elements to be removed by this operation.   |
+| Name      | Type        | Description                                         |
+| --------- | ----------- | --------------------------------------------------- |
+| cacheName | String      | Name of the cache.                                  |
+| setName   | String      | Name of the set item to be altered.                 |
+| element   | String[] \ | Bytes[] | Elements to be removed by this operation. |
 
 <details>
   <summary>Method response object</summary>
@@ -137,11 +135,11 @@ See [response objects](./response-objects.md) for specific information.
 ### SetContainsElement
 Checks if a provided element is in the given set.
 
-| Name      | Type            | Description           |
-|-----------| --------------- |-----------------------|
-| cacheName | String          | Name of the cache.    |
-| setName   | String          | Name of the set item. |
-| element   | String \| Bytes                 | Name of the element to check existence of.   |
+| Name      | Type      | Description                                                        |
+| --------- | --------- | ------------------------------------------------------------------ |
+| cacheName | String    | Name of the cache.                                                 |
+| setName   | String    | Name of the set item.                                              |
+| element   | String \ | Bytes                 | Name of the element to check existence of. |
 
 <details>
   <summary>Method response object</summary>
@@ -162,11 +160,11 @@ See [response objects](./response-objects.md) for specific information.
 ### SetContainsElements
 Checks if provided elements are in the given set.
 
-| Name      | Type       | Description                         |
-|-----------|------------|-------------------------------------|
-| cacheName | String     | Name of the cache.                  |
-| setName   | String     | Name of the set item. |
-| elements  | String[] \| Bytes[]                             | Array of element names to check existence of.   |
+| Name      | Type        | Description                                                                         |
+| --------- | ----------- | ----------------------------------------------------------------------------------- |
+| cacheName | String      | Name of the cache.                                                                  |
+| setName   | String      | Name of the set item.                                                               |
+| elements  | String[] \ | Bytes[]                             | Array of element names to check existence of. |
 
 <details>
   <summary>Method response object</summary>
@@ -187,10 +185,10 @@ See [response objects](./response-objects.md) for specific information.
 ### SetLength
 Get the length of an existing set item
 
-| Name      | Type         | Description                         |
-|-----------| ------------ |-------------------------------------|
-| cacheName | String       | Name of the cache.                  |
-| setName   | String       | Name of the set item to be checked. |
+| Name      | Type   | Description                         |
+| --------- | ------ | ----------------------------------- |
+| cacheName | String | Name of the cache.                  |
+| setName   | String | Name of the set item to be checked. |
 
 <details>
   <summary>Method response object</summary>

@@ -4,8 +4,8 @@
     "collapsible": true,
     "collapsed": true,
     "link": {
-      "description": "Learn more in depth about Momento Serverless Cache.",
-      "slug": "/learn"
+        "description": "Learn more in depth about Momento Serverless Cache.",
+        "slug": "/learn"
     },
     "className": "sidebar-item-guides"
-  }
+}

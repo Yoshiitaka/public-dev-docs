@@ -2,10 +2,10 @@
 sidebar_position: 1
 sidebar_class_name: sidebar-item-security
 sidebar_label: PrivateLink Connectivity
-title: PrivateLink connectivity with Momento services 
+title: PrivateLink connectivity with Momento services
 description: Learn how to add AWS PrivateLink to Momento Cache and Topics services.
-pagination_next: null
-pagination_prev: null
+pagination_next:
+pagination_prev:
 ---
 
 # AWS PrivateLink connectivity with Momento Cache and Momento Topics

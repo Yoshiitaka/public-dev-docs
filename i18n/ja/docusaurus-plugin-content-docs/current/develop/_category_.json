@@ -4,8 +4,8 @@
     "collapsible": true,
     "collapsed": true,
     "link": {
-      "description": "Learn more on how to develop with Momento Serverless Cache.",
-      "slug": "/develop"
+        "description": "Learn more on how to develop with Momento Serverless Cache.",
+        "slug": "/develop"
     },
     "className": "sidebar-item-api-reference"
-  }
+}
